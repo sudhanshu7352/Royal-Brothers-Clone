@@ -4,6 +4,7 @@
     margin: 0;
     width: 100%;
     position: relative;
+    margin-top: -30px;
 }
 
 .inputBox{
@@ -80,7 +81,7 @@
     margin-right: 15px
     /* ;margin-left:5px */
 }
-.our_fleet>h3{
+.our_fleet>h3,.sep1>h3{
     font-weight: 600;
     font-size:x-large
 }
@@ -110,4 +111,16 @@
 .bikes>div>button:hover{
     background-color: #e4ac06;
     cursor: pointer;
+}
+.sep1{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: 30px;
+}
+.cra2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width:100%;
 }

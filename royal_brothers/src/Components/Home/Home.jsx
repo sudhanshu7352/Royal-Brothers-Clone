@@ -4,6 +4,8 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import { Bar } from "./bar";
  import {Caro1}  from "./carousel/Carousel1";
+// import  Caro2  from "./carousel/Caraousel2";
+import { Gallery } from "./carousel/car2";
 
 export const Home = () => {
   // const [bikes, setBikes] = useState([]);
@@ -142,6 +144,17 @@ export const Home = () => {
         </div>
       </div>
      <Caro1 />
+     {/* <Caraousel2 /> */}
+     <div className="sep1">
+        <h3 >
+          FEATURED IN
+        </h3>
+        <Bar />
+        <div className="cra2">
+          {/* <Caro2/> */}
+        </div>
+      </div>
+      <Gallery />
     </div>
   );
 };
