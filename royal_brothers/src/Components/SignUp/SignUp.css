@@ -1,0 +1,86 @@
+.login{
+    font-family: Muli, sans-serif;
+}
+
+.head{
+    font-size: 26px;
+    font-weight: 600px;
+}
+
+.box{
+    width: 370px;
+    height: 500px;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.flex1{
+    display: flex;
+    margin: auto;
+    border-bottom: 1px solid rgb(209, 206, 206);
+    height:40px;
+    font-size: 15px;
+    font-weight: 700px;
+}
+
+.flex1>p:first-child{
+    width:50%;
+}
+
+.flex1>p:last-child{
+    width:50%;
+    height:55%;
+    border-bottom: 5px solid #fecc00;
+}
+
+.ph{
+    font-weight: 600px ;
+    font-size: 12px;
+}
+
+.phone>input:first-child{
+    width:22%;
+    height:40px;
+    border: none;
+    background-color: #f5f5f5;
+    border-radius:4px;
+    margin-left: 10px;
+    padding-left: 15px;
+}
+
+.phone>input:last-child{
+    margin-left: 10px;
+    width:50%;
+    height:40px;
+    border: none;
+    background-color: #f5f5f5;
+    border-radius:4px;
+    margin-right: 10px;
+}
+
+.inp{
+    margin-left: 10px;
+    width:76%;
+    height:40px;
+    border: none;
+    background-color: #f5f5f5;
+    border-radius:4px;
+    margin-right: 10px;
+    margin-top: 30px;
+    padding-left: 15px;
+}
+
+button{
+    width: 80%;
+    height:40px;
+    font-weight: 600px ;
+    font-size: 15px;
+    border:none;
+    border-radius:4px;
+}
+
+.btn{
+    background-color: #fecc00;
+    margin-top:40px;
+}
