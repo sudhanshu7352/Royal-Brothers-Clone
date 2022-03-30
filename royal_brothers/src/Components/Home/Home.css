@@ -65,3 +65,40 @@
     text-decoration: none;
     color: black;
 }
+.info_div{
+    display: flex;
+}
+.info_div>img{
+    margin-top: 30px;
+    margin-right: 10px
+    ;
+}
+.our_fleet>h3{
+    font-weight: 600;
+    font-size:x-large
+}
+.bikes{
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(4,19%);
+    justify-content: center;
+    gap: 2%;
+}
+.bikes>div{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 9px;
+}
+.bikes>div>button{
+    width: 100%;
+    border: 0;
+    background-color: #ffd250;
+    padding: 4px;
+    border-radius: 5px;
+}
+.bikes>div>h3{
+    color: rgb(61, 61, 61);
+}
+.bikes>div>button:hover{
+    background-color: #e4ac06;
+    cursor: pointer;
+}
