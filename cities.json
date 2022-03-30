@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "62148891a97f711a407002bc"
+  },
+  "name": "Bangalore",
+  "imageUrl": "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/001/original/Bangalore_1cf1aa53741a94edc3532f7b2b583c52.jpg?1558599565"
+},{
+  "_id": {
+    "$oid": "621488f1a97f711a407002bd"
+  },
+  "name": "Mumbai",
+  "imageUrl": "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/047/original/Mumbai_733c382a5ea084d09053d85a63fb7a94.jpg?1558600349"
+},{
+  "_id": {
+    "$oid": "6214aa98a97f711a407002cf"
+  },
+  "name": "Ahmedabad",
+  "imageUrl": "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/023/original/Ahmedabad_b8d1eb5783c996a077aff887d35e4168.jpg?1558599488"
+},{
+  "_id": {
+    "$oid": "6214aaf8a97f711a407002d0"
+  },
+  "name": "Manali",
+  "imageUrl": "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/088/original/Manali_db3125c181b228a8b97ace561edff2da.jpg?1558600294"
+},{
+  "_id": {
+    "$oid": "6214ab5fa97f711a407002d1"
+  },
+  "name": "Agra",
+  "imageUrl": "https://d3vp2rl7047vsp.cloudfront.net/cities/round_images/000/000/039/original/Agra_new.jpg?1558599458"
+}]

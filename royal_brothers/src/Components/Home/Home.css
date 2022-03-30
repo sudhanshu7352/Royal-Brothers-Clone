@@ -1,1 +1,67 @@
 /* Home css */
+
+.image1{
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+
+.inputBox{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    width: 25%;
+    position: absolute;
+    height: 350px;
+    margin-left: 7%;
+    background: white;
+    border-radius: 10px;
+    margin-top: -420px;
+}
+.search{
+    font-weight: 500;
+    margin-left: -18%;
+}
+.pickup{
+    margin-left: -70%;
+    font-weight: 600;
+}
+.input_box{
+    height: 30px;
+    width: 37%;
+    border: rgb(211, 208, 208) 1px solid;
+    padding: 3px;
+}
+.drop_div{
+    margin-left: -5%;
+}
+.search_button{
+    width: 90%;
+    height: 11%;
+    margin-top: 8%;
+    background-color: #ffd250;
+    border: 0;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+   
+}
+.search_button:hover{
+    background-color: #e4ac06;
+    cursor: pointer;
+}
+.info{
+    width:65%;
+    display: flex;
+    margin: auto;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.benefits{
+    font-size: 18px;
+    font-weight: 200;
+}
+.linktag{
+    text-decoration: none;
+    color: black;
+}
