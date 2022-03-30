@@ -1,0 +1,118 @@
+[{
+  "_id": {
+    "$oid": "62148dd9a97f711a407002c0"
+  },
+  "city": {
+    "$oid": "62148891a97f711a407002bc"
+  },
+  "name": "Indiranagar (Near Metro station)",
+  "address": "Near Coffee Day, #560/1, 4th Cross CMH Road, Next to Indiranagar Metro Station, Bangalore-38"
+},{
+  "_id": {
+    "$oid": "6214abe8a97f711a407002d4"
+  },
+  "city": {
+    "$oid": "6214ab5fa97f711a407002d1"
+  },
+  "name": "Madhunagar (Commander Colony)",
+  "address": "Dummy address"
+},{
+  "_id": {
+    "$oid": "6214ac7ca97f711a407002dc"
+  },
+  "city": {
+    "$oid": "62148891a97f711a407002bc"
+  },
+  "name": " Yeshwanthpur (BMTC Bus Station)",
+  "address": "Dummy Address"
+},{
+  "_id": {
+    "$oid": "6214aece8bbe709b810d2bdc"
+  },
+  "name": "Marathalli CG Clinic (Karthik Nagar)",
+  "city": {
+    "$oid": "62148891a97f711a407002bc"
+  },
+  "address": "dummy address",
+  "createdAt": {
+    "$date": "2022-02-22T09:37:18.317Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-22T09:37:18.317Z"
+  }
+},{
+  "_id": {
+    "$oid": "6214af0d8bbe709b810d2bde"
+  },
+  "name": "Koramangala",
+  "city": {
+    "$oid": "62148891a97f711a407002bc"
+  },
+  "address": "dummy address",
+  "createdAt": {
+    "$date": "2022-02-22T09:38:21.954Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-22T09:38:21.954Z"
+  }
+},{
+  "_id": {
+    "$oid": "6214af188bbe709b810d2be0"
+  },
+  "name": "HSR Layout (4th Sector)",
+  "city": {
+    "$oid": "62148891a97f711a407002bc"
+  },
+  "address": "dummy address",
+  "createdAt": {
+    "$date": "2022-02-22T09:38:32.420Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-22T09:38:32.420Z"
+  }
+},{
+  "_id": {
+    "$oid": "6214af228bbe709b810d2be2"
+  },
+  "name": "Hennur Lake (Near Axis Bank)",
+  "city": {
+    "$oid": "62148891a97f711a407002bc"
+  },
+  "address": "dummy address",
+  "createdAt": {
+    "$date": "2022-02-22T09:38:42.784Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-22T09:38:42.784Z"
+  }
+},{
+  "_id": {
+    "$oid": "6214af328bbe709b810d2be4"
+  },
+  "name": "Whitefield Tansi Honda(Hoodi Circle)",
+  "city": {
+    "$oid": "62148891a97f711a407002bc"
+  },
+  "address": "dummy address",
+  "createdAt": {
+    "$date": "2022-02-22T09:38:58.096Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-22T09:38:58.096Z"
+  }
+},{
+  "_id": {
+    "$oid": "6214af468bbe709b810d2be6"
+  },
+  "name": "Battarahalli (Jyothi Nagar)",
+  "city": {
+    "$oid": "62148891a97f711a407002bc"
+  },
+  "address": "dummy address",
+  "createdAt": {
+    "$date": "2022-02-22T09:39:18.218Z"
+  },
+  "updatedAt": {
+    "$date": "2022-02-22T09:39:18.218Z"
+  }
+}]
