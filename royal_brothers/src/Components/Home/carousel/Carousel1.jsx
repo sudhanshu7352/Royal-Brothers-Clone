@@ -37,7 +37,7 @@ export const Caro1 =()=> {
         >
           <div className="carousel_text">
           <h3>{image.text}</h3>
-          <p >{image.text2}</p>
+          <p className="p_text" >{image.text2}</p>
           </div>
         </div>
         

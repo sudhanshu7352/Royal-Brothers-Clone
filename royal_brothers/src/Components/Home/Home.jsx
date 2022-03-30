@@ -132,10 +132,10 @@ export const Home = () => {
           <button>BOOK NOW</button>
         </div>
         <div>
-          <h3>Honda X Blade</h3>
+          <h3 className="honda-x-blade">Honda X Blade</h3>
           <img src="https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/321/medium/p250n.jpg?1642421263" alt="" />
           <hr />
-          <h3>₹39/hour</h3>
+          <h3 className="honda-x-blade">₹39/hour</h3>
           <button>BOOK NOW</button>
         </div>
         <div>
