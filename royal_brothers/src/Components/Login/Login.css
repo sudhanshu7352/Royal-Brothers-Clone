@@ -90,7 +90,7 @@
     text-decoration: none;
 }
 
-button{
+.loginbutton{
     width: 80%;
     height:40px;
     font-weight: 600px ;

@@ -29,9 +29,9 @@ export const Login = () => {
           <a href="##">Forgot password?</a>
         </div>
 
-        <button className="btn">Login with Password</button>
+        <button className="btn loginbutton">Login with Password</button>
         <p>OR</p>
-        <button>Login with OTP</button>
+        <button className="loginbutton">Login with OTP</button>
 
       </div>
     </div>
