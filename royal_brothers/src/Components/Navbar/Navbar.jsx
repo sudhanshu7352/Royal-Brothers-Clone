@@ -84,6 +84,15 @@ export  function Navbar() {
 
 
   return (
+<<<<<<< HEAD
+    <div>
+      Navbar
+    <Link to={"/store"}>Store</Link>  
+    <Link to={"/login"}>Login</Link>
+    <Link to={"/register"}>SignUp</Link>  
+    </div>
+  )
+=======
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar position="fixed" open={open} sx={{ backgroundColor: "#ffffff" }}>
@@ -159,4 +168,5 @@ export  function Navbar() {
       </Main>
     </Box>
   );
+>>>>>>> e769125ced35a8ff8e5392746fe7cf21ceea0011
 }
