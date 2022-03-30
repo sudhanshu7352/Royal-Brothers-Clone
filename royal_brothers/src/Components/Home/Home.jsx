@@ -53,9 +53,11 @@ export const Home = () => {
             selected={selectedDTime}
           />
         </div>
+          <Link className="linktag" to="/bookingPage" >
         <button className="search_button">
-          <Link className="linktag" to="/bookingPage" >Search</Link>
+        Search
         </button>
+            </Link>
       </div>
       <div className="info">
         <div className="info_div">
