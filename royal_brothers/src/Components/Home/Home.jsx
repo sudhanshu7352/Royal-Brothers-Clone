@@ -106,7 +106,10 @@ export const Home = () => {
         </h6 >
         </div>
       </div>
-      <img className="image1" src="https://d36g7qg6pk2cm7.cloudfront.net/assets/long_term/RBX_carousel_one-5e5beb3711f8184ba280e0791b058b8b1b4f03cad772f10b0ab39adfc5d06ec5.jpg" alt="" />
+      <div>
+
+      <img className="image2" src="https://d36g7qg6pk2cm7.cloudfront.net/assets/long_term/RBX_carousel_one-5e5beb3711f8184ba280e0791b058b8b1b4f03cad772f10b0ab39adfc5d06ec5.jpg" alt="" />
+      </div>
       <div className="our_fleet">
         <h3>
           OUR FLEET
@@ -143,7 +146,10 @@ export const Home = () => {
           <button>BOOK NOW</button>
         </div>
       </div>
+       <div className="car1_div">
+
      <Caro1 />
+       </div>
      {/* <Caraousel2 /> */}
      <div className="sep1">
         <h3 >
