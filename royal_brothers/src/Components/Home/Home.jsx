@@ -4,6 +4,8 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import { Bar } from "./bar";
  import {Caro1}  from "./carousel/Carousel1";
+// import  Caro2  from "./carousel/Caraousel2";
+import { Gallery } from "./carousel/car2";
 
 export const Home = () => {
   // const [bikes, setBikes] = useState([]);
@@ -53,9 +55,11 @@ export const Home = () => {
             selected={selectedDTime}
           />
         </div>
+          <Link className="linktag" to="/bookingPage" >
         <button className="search_button">
-          <Link className="linktag" to="/bookingPage" >Search</Link>
+        Search
         </button>
+            </Link>
       </div>
       <div className="info">
         <div className="info_div">
@@ -102,7 +106,10 @@ export const Home = () => {
         </h6 >
         </div>
       </div>
-      <img className="image1" src="https://d36g7qg6pk2cm7.cloudfront.net/assets/long_term/RBX_carousel_one-5e5beb3711f8184ba280e0791b058b8b1b4f03cad772f10b0ab39adfc5d06ec5.jpg" alt="" />
+      <div>
+
+      <img className="image2" src="https://d36g7qg6pk2cm7.cloudfront.net/assets/long_term/RBX_carousel_one-5e5beb3711f8184ba280e0791b058b8b1b4f03cad772f10b0ab39adfc5d06ec5.jpg" alt="" />
+      </div>
       <div className="our_fleet">
         <h3>
           OUR FLEET
@@ -125,10 +132,10 @@ export const Home = () => {
           <button>BOOK NOW</button>
         </div>
         <div>
-          <h3>Honda X Blade</h3>
+          <h3 className="honda-x-blade">Honda X Blade</h3>
           <img src="https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/321/medium/p250n.jpg?1642421263" alt="" />
           <hr />
-          <h3>₹39/hour</h3>
+          <h3 className="honda-x-blade">₹39/hour</h3>
           <button>BOOK NOW</button>
         </div>
         <div>
@@ -139,7 +146,21 @@ export const Home = () => {
           <button>BOOK NOW</button>
         </div>
       </div>
+       <div className="car1_div">
+
      <Caro1 />
+       </div>
+     {/* <Caraousel2 /> */}
+     <div className="sep1">
+        <h3 >
+          FEATURED IN
+        </h3>
+        <Bar />
+        <div className="cra2">
+          {/* <Caro2/> */}
+        </div>
+      </div>
+      <Gallery />
     </div>
   );
 };

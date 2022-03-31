@@ -3,6 +3,7 @@
 }
 
 .head{
+    margin-top: 0px;
     font-size: 26px;
     font-weight: 600px;
 }
@@ -26,7 +27,7 @@
 
 .flex>p:first-child{
     width:50%;
-    height:55%;
+    height:65%;
     border-bottom: 5px solid #fecc00;
 }
 

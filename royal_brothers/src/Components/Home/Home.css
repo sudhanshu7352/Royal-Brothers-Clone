@@ -4,6 +4,13 @@
     margin: 0;
     width: 100%;
     position: relative;
+    margin-top: -30px;
+}
+.image2{
+    margin: 0;
+    width: 100%;
+   
+    margin-top: 30px;
 }
 
 .inputBox{
@@ -19,24 +26,28 @@
 .search{
     font-weight: 500;
     margin-left: -18%;
+    margin-top: 4%;
 }
 .pickup{
     margin-left: -70%;
     font-weight: 600;
+    margin-top: 7%;
+    margin-bottom: -5%;
 }
 .input_box{
-    height: 30px;
+    height: 40px;
     width: 37%;
     border: rgb(211, 208, 208) 1px solid;
     padding: 3px;
 }
 .drop_div{
     margin-left: -5%;
+    margin-top: 7%;
 }
 .search_button{
     width: 90%;
     height: 11%;
-    margin-top: 8%;
+    margin-top: 10%;
     background-color: #ffd250;
     border: 0;
     border-radius: 10px;
@@ -50,9 +61,11 @@
 }
 .info{
     width:65%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    gap: 20px;
     margin: auto;
-    margin-top: -20px;
+    margin-top: 20px;
     margin-bottom: 30px;
     align-items: center;
     justify-content: space-evenly;
@@ -67,20 +80,22 @@
 }
 .info_div{
     display: flex;
+    /* margin-top: 30px; */
 }
 .info_div>img{
-    margin-top: 30px;
-    margin-right: 10px
-    ;
+    /* margin-top: 30px; */
+    margin-right: 15px
+    /* ;margin-left:5px */
 }
-.our_fleet>h3{
+.our_fleet>h3,.sep1>h3{
     font-weight: 600;
     font-size:x-large
 }
 .bikes{
     display: grid;
     margin-top: 20px;
-    grid-template-columns: repeat(4,19%);
+    grid-template-columns: repeat(4,20%);
+    /* grid-template-rows: repeat(4,300px); */
     justify-content: center;
     gap: 2%;
 }
@@ -97,8 +112,131 @@
 }
 .bikes>div>h3{
     color: rgb(61, 61, 61);
+    padding: 4px;
 }
 .bikes>div>button:hover{
     background-color: #e4ac06;
     cursor: pointer;
 }
+.sep1{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: 30px;
+}
+.cra2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width:100%;
+}
+
+
+/* @media (min-width: 992px) and (max-width: 1380px) {
+} */
+/* @media screen and (max-width: 992px) { 
+       .projectPage-header {  
+                 height: 25vh;        width: 100%;        display: flex;        align-items: center;        justify-content: center;    }
+    .project-grid {    
+            gap: 3rem;    }
+        } */
+@media screen and (max-width: 768px) {  
+    .image1{
+        margin: 0;
+        width: 100%;
+        /* position: relative; */
+        margin-top: -30px;
+    }
+     .inputBox{
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        width: 85%;
+        position: static;
+        height: 420px;
+        margin-left: 7%;
+        background: white;
+        border-radius: 10px;
+        margin-top: 20px;
+        /* padding: 1px; */
+    }
+    .search{
+        font-weight: 500;
+        margin-left: -18%;
+        padding-top: 8px;
+        /* margin-top: 6%; */
+    }
+    .info{
+        width:65%;
+        display: grid;
+        grid-template-columns: repeat(2,45%);
+        gap: 20px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .bikes{
+        display: grid;
+        margin-top: 20px;
+        grid-template-columns: repeat(2,40%);
+        /* grid-template-rows: repeat(4,300px); */
+        justify-content: center;
+        gap: 4%;
+    }
+    /* .car1_div>div>img{
+        width: 100%;
+    } */
+}
+/* @media screen and (max-width: 550px) {    .projectPage-header h1 {        font-size: 3rem;    }} */
+@media screen and (max-width: 400px) { 
+    .image1{
+        margin: 0;
+        width: 100%;
+        /* position: relative; */
+        margin-top: -10px;
+    }
+     .inputBox{
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        width: 95%;
+        position: static;
+        height: 330px;
+        margin-left: 3%;
+        background: white;
+        border-radius: 10px;
+        margin-top: 20px;
+        /* padding: 1px; */
+    }
+    .search{
+        font-weight: 500;
+        margin-left: -18%;
+        padding-top: 8px;
+        /* margin-top: 6%; */
+    }
+    .info{
+        width:85%;
+        display: grid;
+        grid-template-columns: repeat(2,49%);
+        grid-template-rows: 80px;
+        gap: 10px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .bikes{
+        display: grid;
+        margin-top: 20px;
+        grid-template-columns: repeat(2,44%);
+        /* grid-template-rows: repeat(4,300px); */
+        justify-content: center;
+        gap: 4%;
+    }
+    .bikes>div>img{
+        width: 140px;
+        height: 80px;
+    }
+    .honda-x-blade{
+        margin-top: 14px;
+    }
+    }

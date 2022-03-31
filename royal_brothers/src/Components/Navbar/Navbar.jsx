@@ -20,6 +20,12 @@ import MailIcon from "@mui/icons-material/Mail";
 import { Logo } from "./Logo";
 import {DropDownMenu} from "./DropDownMenu";
 import ClearIcon from "@mui/icons-material/Clear";
+import {Pic} from './Pic'
+import {Tariff} from "./Tariff"
+import {Offers} from "./Offers"
+import {DropDown2} from "./DropDown2"
+import {City} from './City'
+import {Link} from "react-router-dom"
 
 
 
@@ -98,9 +104,15 @@ export  function Navbar() {
             <MenuIcon />
           </IconButton>
           <Logo />
-
+          <Pic/>
+          <Tariff />
           <DropDownMenu />
-          {/* write code here */}
+          <Offers/>
+          <DropDown2/>
+          <City/>
+          <p style={{color: "black" , marginLeft:"20px" , marginRight:"25px"}} >|</p>
+          <Link to="/login" style={{textDecoration:"none", color:"gray" , fontSize:"14px" , marginRight:"15px"}} >Login</Link>
+          <Link to="/register" style={{textDecoration:"none" , color:"black" , backgroundColor:"#f3d071" ,padding:"10px", fontSize:"14px" , borderRadius:"5px"}}>Sign up</Link>
 
         </Toolbar>
       </AppBar>
