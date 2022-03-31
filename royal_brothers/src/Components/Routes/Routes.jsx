@@ -8,6 +8,7 @@ import { NotFound } from '../NotFound/NotFound'
 import { SignUp } from '../SignUp/SignUp'
 import {Store} from '../Store/Store'
 import { Tariff } from '../Tariff/Tariff'
+import { ProductPage } from '../Product/product'
 
 export const Routes = () => {
   return (
@@ -19,6 +20,7 @@ export const Routes = () => {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<SignUp />} />
         <Route exact path="/tariff" element={<Tariff/>} />
+        <Route exact path="/product" element={<ProductPage />} />
         {/* {Write all the routes here} */}
         <Route exact path="*" element={<NotFound />} />
       </ROUTES>
