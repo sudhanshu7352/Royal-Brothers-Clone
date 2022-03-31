@@ -19,9 +19,9 @@
     height: 650px;
   }
   
-  .demo-item {
+  /* .demo-item {
     height: 650px;
-  }
+  } */
   .carousel_text{
     width: 33%;
     margin-top: 20%;
@@ -39,7 +39,7 @@
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
     .carousel>img{
-      width: 100%;igh
+      width: 100%;
     }
     .demo-item {
       /* height: 650px; */
