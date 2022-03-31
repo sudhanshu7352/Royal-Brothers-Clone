@@ -7,6 +7,7 @@ import { Navbar } from '../Navbar/Navbar'
 import { NotFound } from '../NotFound/NotFound'
 import { SignUp } from '../SignUp/SignUp'
 import {Store} from '../Store/Store'
+import { Tariff } from '../Tariff/Tariff'
 
 export const Routes = () => {
   return (
@@ -15,8 +16,9 @@ export const Routes = () => {
       <ROUTES>
         <Route exact path="/" element={<Home />} />
         <Route path="/store" element={<Store />} />
-        <Route exact path="/login" element={<Login/>} />
-        <Route exact path="/register" element={<SignUp/>} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/register" element={<SignUp />} />
+        <Route exact path="/tariff" element={<Tariff/>} />
         {/* {Write all the routes here} */}
         <Route exact path="*" element={<NotFound />} />
       </ROUTES>
