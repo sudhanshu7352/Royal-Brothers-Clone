@@ -20,19 +20,22 @@
     display: flex;
     margin: auto;
     border-bottom: 1px solid rgb(209, 206, 206);
-    height:40px;
+    /* height:40px; */
     font-size: 15px;
     font-weight: 700px;
+    padding-top: 12px;
 }
 
 .flex>p:first-child{
     width:50%;
     height:65%;
+    color: black;
     border-bottom: 5px solid #fecc00;
 }
 
 .flex>p:last-child{
     width:50%;
+    color: grey;
 }
 
 .ph{
