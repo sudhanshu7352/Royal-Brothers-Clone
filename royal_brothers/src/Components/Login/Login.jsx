@@ -50,7 +50,7 @@ export const Login = () => {
         <ReCAPTCHA sitekey="Your client site key" onChange={handleCaptcha} />
 
         <button className="btn loginbutton">Login with Password</button>
-        <p>OR</p>
+        <p style={{margin:"20px"}} >OR</p>
         <button className="loginbutton">Login with OTP</button>
       </div>
     </div>

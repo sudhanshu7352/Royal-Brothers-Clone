@@ -3,33 +3,35 @@
 }
 
 .head{
-    margin-top: 0px;
     font-size: 26px;
     font-weight: 600px;
+    margin-bottom:20px;
+    font-weight:bold
 }
 
 .box{
     width: 370px;
-    height: 500px;
+    /* height: 500px; */
     margin: auto;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    padding-bottom: 27px;
 }
 
 .flex{
     display: flex;
     margin: auto;
     border-bottom: 1px solid rgb(209, 206, 206);
-    /* height:40px; */
+    padding-top: 20px;
     font-size: 15px;
     font-weight: 700px;
-    padding-top: 12px;
 }
 
 .flex>p:first-child{
     width:50%;
     height:65%;
     color: black;
+    font-weight: bolder;
     border-bottom: 5px solid #fecc00;
 }
 
@@ -39,6 +41,8 @@
 }
 
 .ph{
+    width: 135px;
+    
     font-weight: 600px ;
     font-size: 12px;
 }

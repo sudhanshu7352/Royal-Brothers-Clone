@@ -5,6 +5,8 @@
 .head{
     font-size: 26px;
     font-weight: 600px;
+     margin-bottom:20px;
+    font-weight:bold
 }
 
 .box{
@@ -19,10 +21,9 @@
     display: flex;
     margin: auto;
     border-bottom: 1px solid rgb(209, 206, 206);
-    /* height:40px; */
+    padding-top: 20px;
     font-size: 15px;
     font-weight: 700px;
-    padding-top: 12px;
 }
 
 .flex1>p:first-child{
@@ -31,9 +32,10 @@
 }
 
 .flex1>p:last-child{
-    width:50%;
+     width:50%;
     height:65%;
-    color:black;
+    color: black;
+    font-weight: bolder;
     border-bottom: 5px solid #fecc00;
 }
 
