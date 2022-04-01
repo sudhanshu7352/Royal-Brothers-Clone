@@ -1,14 +1,13 @@
-import React from 'react'
-import './SignUp.css'
-import {Link} from 'react-router-dom'
+import React from "react";
+import "./SignUp.css";
+import { Link } from "react-router-dom";
 
 export const SignUp = () => {
-
   const [captcha, setCaptcha] = React.useState(false);
 
   const [userDetails, setUserDetails] = React.useState({
-    email:"",
-    name:"",
+    email: "",
+    name: "",
     number: "",
     password: "",
   });
@@ -34,8 +33,6 @@ export const SignUp = () => {
     setCaptcha(true);
   };
 
-
-
   return (
     <div className="login">
       <p className="head">Rent . Ride . Explore</p>
@@ -58,7 +55,7 @@ export const SignUp = () => {
           name="name"
           onChange={handleChange}
           type="text"
-          placeholder="Name as per Aadhaar/Passport"
+          placeholder="Name as per Aadhaar / Passport"
         />
         <input
           className="inp"
@@ -88,4 +85,4 @@ export const SignUp = () => {
       </div>
     </div>
   );
-}
+};
