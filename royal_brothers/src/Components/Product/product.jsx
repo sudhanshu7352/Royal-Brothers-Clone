@@ -4,9 +4,11 @@ import InputBase from "@mui/material/InputBase";
 import Paper from "@mui/material/Paper";
 import axios from "axios";
 import SearchIcon from "@material-ui/icons/Search";
+import { Link } from "react-router-dom";
 
 export const Product = () => {
   const [data, setdata] = React.useState([]);
+
 
   React.useEffect(() => {
     getdata();
@@ -666,8 +668,11 @@ export const Product = () => {
                       <p>₹{e.pricePerHour}</p>
                       <span>(100 KM included)</span>
                     </div>
+                      {/* <Link to="/checkout">
+                      </Link> */}
                     <div>
-                      <button>Book</button>
+                      <button  className="Boo">Book </button>
+                     
                     </div>
                   </div>
                 </div>

@@ -354,7 +354,17 @@
       font-size: 18px;
       margin-right:-5px ;
     }
-    
+    /* .Boo{
+      margin-top: 22px;
+      background-color: #fed250;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      height: 34px;
+      font-size: 18px;
+      margin-right:-5px ;
+
+    } */
   .prizebike > div > button:hover{
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
