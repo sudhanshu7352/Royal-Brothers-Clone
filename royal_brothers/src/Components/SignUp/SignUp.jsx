@@ -1,14 +1,18 @@
 import React from "react";
 import "./SignUp.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export const SignUp = () => {
+
+  const navigate = useNavigate();
+
   const [captcha, setCaptcha] = React.useState(false);
 
   const [userDetails, setUserDetails] = React.useState({
     email: "",
     name: "",
-    number: "",
+    phone: "",
     password: "",
   });
 
@@ -21,12 +25,25 @@ export const SignUp = () => {
 
   const handleSubmit = (e) => {
     console.log(userDetails);
-    setUserDetails({
-      email: "",
-      name: "",
-      number: "",
-      password: "",
-    });
+    // register flow complete, connect redux store remaining
+
+    axios
+      .post("http://localhost/register", userDetails)
+      .then((res) => {
+        console.log(res.data);
+        alert("Register Successful");
+        setUserDetails({
+          email: "",
+          name: "",
+          phone: "",
+          password: "",
+        });
+        navigate("/login");
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("Register Failed");
+      });
   };
 
   const handleCaptcha = () => {
@@ -68,7 +85,7 @@ export const SignUp = () => {
         <p className="ph">Mobile</p>
         <div className="phone">
           <input type="number" placeholder="+91" />
-          <input type="number" name="number" onChange={handleChange} />
+          <input type="number" name="phone" onChange={handleChange} />
         </div>
 
         <input
