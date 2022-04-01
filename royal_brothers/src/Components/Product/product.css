@@ -387,8 +387,7 @@
       }
       #sortingbtn > button {
         margin-left: 55px;
-        text-align: center;
-        
+        text-align: center;        
       }
   
     }
@@ -396,8 +395,7 @@
     @media only screen and (max-width: 610px) {
       .firstmain {
         display: none;
-      }
-     
+      }     
       .mapbikes {
         width: 96%;
         margin: 15px;
@@ -411,8 +409,7 @@
        
       }
   
-      .prizebike > div > span {
-      
+      .prizebike > div > span {      
         margin-left: -7px;
       }
     }
