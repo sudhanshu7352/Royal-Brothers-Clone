@@ -1,1 +1,142 @@
 /* Footer css */
+
+.footer1{
+  width:100%;
+  background-color:#373737;
+  color:#ffffff;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  text-align:left;
+}
+
+.footer1>div{
+    margin-left:80px;
+}
+
+.heading{
+    color:#ffffff;
+    font-size:13px;
+    font-weight:700px;
+    margin-bottom: 2px;
+    margin-top: 60px;
+
+}
+.footer1,.footer2,.footer3>div>p{
+    font-size:13px;
+    font-weight:400px;
+    color:#dddddd;
+    /* margin-bottom: 10px; */
+}
+.imagesicon>img{
+    margin-right: 40px;
+}
+
+.footer2{
+    width: 100%;
+    background-color: #444444;
+    color:#fff;
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
+.footer2>p{
+    font-size:14px;
+    font-weight:400px;
+    margin: 0px 100px;
+}
+
+.footer2>ul{
+    font-size:14px;
+    font-weight:400px;
+    margin: 0px 100px;
+    text-align:left;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer2>ul li{
+    margin-left:20px;
+}
+
+.footer3{
+    display: flex;
+    background-color:#373737;
+    color:#ffffff;
+    padding: 15px;
+}
+
+.footer3>p{
+    font-size:15px;
+}
+
+.footer3>img{
+    margin: 4px;
+}
+
+.last{
+    margin-left:40%
+}
+
+
+@media only screen and (min-width:390px) and (max-width:768px){
+    .footer1{
+        grid-template-columns: repeat(2,50%);
+    }  
+    .footer1>div{
+        margin-left:50px;
+    }
+
+    .heading{
+        margin-bottom: 0px;
+        margin-top: 30px;
+
+    } 
+    .footer1,.footer2,.footer3>div>p{
+        font-size:13px;
+        margin-bottom: 5px;
+    }
+    .imagesicon>img{
+        margin-right: 25px;
+    }
+
+    .footer1 .downloadimg{
+        width:120px
+    }
+
+    .footer2{
+        padding-top: 50px;
+    }
+
+    .footer2>p{
+        margin: 0px 80px;
+    }
+
+    .footer2>ul{
+        font-size:10px;
+        margin: 0px 30px;
+    }
+
+    .footer2>ul li{
+        margin-left:15px;
+    }
+
+}
+
+@media only screen and (min-width:0px) and (max-width:390px){
+    .footer1{
+        grid-template-columns: repeat(1,100%);
+    }
+    .imagesicon>img{
+        margin-right: 20px;
+    }
+
+    .footer1 .downloadimg{
+        width:100px
+    }
+    .footer3>img{
+        margin: 4px;
+    }
+    .last{
+        margin-left:10%
+    }
+}

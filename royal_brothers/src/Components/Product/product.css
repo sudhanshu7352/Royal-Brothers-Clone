@@ -1,0 +1,412 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Muli", sans-serif;
+  }
+    
+  .headbikes {
+      width: 100%;
+      background-color: rgb(254, 210, 80);
+      text-align: center;
+      padding: 0.5%;
+      
+    }
+    .headbikes > p {
+      font-size: 1.03em;
+      font-weight: 400;
+      margin: 0.5em auto;
+    }
+    .headbikes > p > span >a {
+      color: dodgerblue;
+      font-weight: 550;
+  
+    }
+    
+    .sorthead {
+      display: flex;
+      margin-top: 1em;
+    }
+  
+    .sorthead > div {
+      border-bottom: 0.0667rem solid rgba(0,0,0,0.15);
+      border-bottom-width: 0.0667rem;
+      border-bottom-style: solid;
+      border-bottom-color: rgba(0, 0, 0, 0.15);
+      width: 23.5%;
+      margin-left: 15px;
+      display: inline-block;
+    }
+  
+    .sorthead > div > p {
+      font-size: 1.6em;
+      font-weight: 500;
+      text-align: left;
+      padding: 5px;
+   }
+    
+   
+    
+    #sortingbtn {
+     width:77%;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-right: 10px;
+    }
+    
+    #sortingbtn > button {
+      border: none;
+      font-size: 15.5px;
+      font-weight: 400;
+      background-color: white;
+      display: inline-block;
+      cursor: pointer;
+      font-family: "Muli", sans-serif;
+      margin-left: 26.9px;
+      
+    }
+  
+    #bottomVBtnHover :hover{
+      padding-bottom: 11.5px;
+      border-bottom: 3px solid rgb(204, 204, 32);
+    }
+    
+    .container {
+      display: flex;
+     
+      
+    }
+    
+    .container > div:first-child {
+      width: 32%;
+    
+    }
+    
+    
+    
+    .firstmain {
+      margin-left: 5%;
+      padding-right: 3%;
+      overflow: scroll;
+      overflow-x: hidden;
+      height: 70vh;
+    
+    }
+    
+    .firstmain > div > h6 {
+      text-align: left;
+      font-size: 17px;
+      line-height: 2;
+      font-weight: 600;
+      vertical-align: baseline;
+    }
+  
+    .datetime {
+      display: flex;
+      gap: 7%;
+    }
+    .Dateandtime {
+      display: flex;
+      flex-direction: column;
+      padding: 2%;
+      line-height: 0px;
+    }
+    .Dateandtime > label {
+      text-align: left;
+      font-size: 16px;
+      line-height: 19.2px;
+      vertical-align: baseline;
+    }
+    .Dateandtime > input {
+      border: none;
+      border-bottom: solid 1px black;
+      margin-right: 5%;
+      width: 40%;
+    }
+    
+    #searching > h6 {
+      text-align: left;
+      font-size: 17px;
+      line-height: 2;
+      font-weight: 600;
+      vertical-align: baseline;
+      margin-top: 12px;
+    }
+    
+    #timeHours{
+   text-align: left;
+  margin: 10px 0px;
+    }
+  
+  
+  
+    .header__search {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      border-radius: 24px;
+    }
+    
+    .header__searchInput {
+      padding: 10px;
+      border: none;
+      width: 100%;
+      font-size: 15px;
+      color: rgb(14, 73, 73);
+      text-align: left;
+      margin: auto;
+      margin-right: -25px;
+      font-weight: 500;
+      padding-left: 0px;
+      border-bottom: 1px solid rgb(209, 230, 199);
+    }
+    
+    .header__searchIcon {
+     
+      height: 52px !important;
+    
+    }
+  
+    .overflow {
+      margin-top: 5%;
+      height: 100px;
+      overflow: scroll;
+      overflow-x: hidden;
+      border: 1px solid rgb(209, 230, 199);
+    }
+  
+    
+    .overflow > div {
+      display: flex;
+    }
+    .overflow > div > input {
+      margin: 7px 10px;
+     
+    }
+   
+    hr{
+      height: 1px;
+      background-color: #ccc;
+      border: none;
+      
+  }
+  
+  #apply{
+    width: 97%;
+    margin:20px 10px;
+    border: 1px solid white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 66px;
+    
+  }
+    .applyfilter {
+      margin: 15px 0px;
+      width: 92%;
+      background-color: #fed250;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      height: 34px;
+      font-size: 18px;
+      
+    }
+    #apply :hover{
+  
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    }
+  
+    .secondmain {
+      width: 100%;
+      margin-top: -10px;
+      padding-left: 1%;
+      margin-left: 30px;
+      
+    }
+    .secondmain > div {
+      display: flex;
+      gap: 2%;
+      flex-wrap: wrap;
+    }
+    
+    
+    
+    .mapbikes {
+      width: 30%;
+      margin-top: 2.5%;
+      text-align: center;
+      padding: 1.5%;
+      padding-bottom: 0.5%;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+     border: 1px solid transparent;
+    border-radius: 0px 0px 8px 8px;
+  
+    }
+  
+   
+  
+    .mapbikes:hover{
+      -webkit-transform: scale(1.07);
+      -ms-transform: scale(1.08);
+      transform: scale(1.05);
+      transition: 1s ease;
+      }
+  
+    .imgData{
+      float: left;
+      margin: -4%;
+    }
+  
+    .imbikes img{
+      transition: 1s ease;
+    }
+  
+    .imbikes img:hover{
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      transform: scale(0.8);
+      transition: 1s ease;
+      cursor: pointer;
+    }
+    .spanZero {
+      float: left;
+      font-size: 13px;
+      margin: -6px 0px 0px 15px;
+      color: teal;
+    }
+    .mapbikes > h6 {
+      font-size: 15.5px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    
+    .available {
+      font-size: 16px;
+      color: #9e9e9e;
+       margin: 0px 0px -20px 0px;
+    }
+    .mapbikes > select {
+      width: 95%;
+      border: none;
+      border-bottom: 1px solid black;
+      cursor: pointer;
+      font-size: 15px;
+      text-align: center;
+      font-weight: 500;
+    }
+  
+    .timingbike {
+      display: flex;
+      gap: 20%;
+      padding: 3%;
+    }
+    .arrivetime{
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .timingTo {
+      background-color: black;
+      color: white;
+      width: 50px;
+      height: 30px;
+      text-align: center;
+      border-radius: 99%;   
+      margin-top: 10%;
+      padding-top: 0.5%;
+    }
+  
+   
+  
+    .prizebike {
+      display: flex;
+      gap: 30%;
+      font-size: 10px;
+      padding: 2%;
+      margin-top: -20px;
+      margin-bottom: 10px;
+    }
+    
+    .prizebike > div {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+    .prizebike > div > p {
+      font-size: 19px;
+      font-weight: 700;
+      margin-top: 10%;
+      margin-left: -30px;
+    }
+    .prizebike > div > span {
+      font-size: 11px;
+      margin-top: 4%;
+      color: #6d6666;
+      margin-left: -13px;
+    }
+    .prizebike > div > button {
+      margin-top: 22px;
+      background-color: #fed250;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      height: 34px;
+      font-size: 18px;
+      margin-right:-5px ;
+    }
+    
+  .prizebike > div > button:hover{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+  
+  
+    @media only screen and (max-width: 1020px) {
+      .firstmain {
+        display: none;
+      }
+      .secondmain {
+        width: 1000%;
+      }
+      .mapbikes {
+        width: 45%;
+      }
+      #apply {
+        display: none;
+      }  
+      .sorthead >div {
+        display:none;
+      } 
+  
+      #sortingbtn {
+        width:100%;
+       
+      }
+      #sortingbtn > button {
+        margin-left: 55px;
+        text-align: center;        
+      }
+  
+    }
+    
+    @media only screen and (max-width: 610px) {
+      .firstmain {
+        display: none;
+      }     
+      .mapbikes {
+        width: 96%;
+        margin: 15px;
+        margin-right: 45px;
+      }
+      #apply {
+        display: none;
+      }
+      #sortingbtn {
+       display: none;
+       
+      }
+  
+      .prizebike > div > span {      
+        margin-left: -7px;
+      }
+    }
+    

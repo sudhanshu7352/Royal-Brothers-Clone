@@ -55,7 +55,7 @@ export const Home = () => {
             selected={selectedDTime}
           />
         </div>
-          <Link className="linktag" to="/bookingPage" >
+          <Link className="linktag" to="/product" >
         <button className="search_button">
         Search
         </button>

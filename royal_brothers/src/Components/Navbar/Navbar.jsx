@@ -34,7 +34,7 @@ const drawerWidth = 280;
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
   ({ theme, open }) => ({
     flexGrow: 1,
-    padding: theme.spacing(3),
+    padding: theme.spacing(2),
     transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -58,9 +58,9 @@ const AppBar = styled(MuiAppBar, {
     duration: theme.transitions.duration.leavingScreen,
   }),
   ...(open && {
-    width: `calc(100% )`,
-    paddingLeft:"44px",
+    width: `calc(100%)`,
     marginLeft: `${drawerWidth}px`,
+    paddingLeft: "44px",
     transition: theme.transitions.create(["margin", "width"], {
       easing: theme.transitions.easing.easeOut,
       duration: theme.transitions.duration.enteringScreen,
@@ -72,6 +72,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   padding: theme.spacing(0, 1),
+
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
   justifyContent: "flex-end",
@@ -146,6 +147,7 @@ export  function Navbar() {
         
         <List sx={{ p: 1.5 }}>
           {[
+            "Login | Sign up",
             "Tariff",
             "Store",
             "Offers",

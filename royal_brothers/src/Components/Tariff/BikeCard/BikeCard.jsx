@@ -1,18 +1,73 @@
-import React from 'react'
+import React from "react";
 import Button from "@mui/material/Button";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
 export const BikeCard = () => {
-    const [alignment, setAlignment] = React.useState("hourly");
+  const [alignment, setAlignment] = React.useState("hourly");
 
-    const handleChange = (event, newAlignment) => {
+  const handleChange = (event, newAlignment) => {
+    setAlignment(newAlignment);
+  };
 
-     
-      setAlignment(newAlignment);
-    };
+  const pTagContentStyle = {
+    listStyle: "none",
+    color: "#746e6e",
+    fontSize: "11px",
+    lineHeight: "2",
+    display: "flex",
+    justifyContent: "space-between",
+  };
 
-   
+  const liHeadingStyle = {
+    listStyle: "none",
+    color: "black",
+    fontSize: "12px",
+    lineHeight: 2.3,
+  };
+
+  const dayHandler = (days) => {
+    if(days==="7Days") days = 7;
+    else if(days==="30Days") days = 30;
+    else days = 15;
+
+    return (
+      <>
+        <ul>
+          <li style={liHeadingStyle}>
+            <span>Rental Charges</span>
+            <div style={{ padding: "0px 25px 0px 10px" }}>
+              <p style={pTagContentStyle}>
+                Price for {days} Days
+                <span style={{ color: "black" }}>₹ {days * (20 * 11)}</span>
+              </p>
+            </div>
+          </li>
+          <li style={liHeadingStyle}>
+            <span>Km Limit</span>
+            <div style={{ padding: "0px 25px 0px 10px" }}>
+              <p style={pTagContentStyle}>
+                No of kms in {days} days that can be
+                <span style={{ color: "black" }}>{days * 110 } km</span>
+              </p>
+              <p style={pTagContentStyle}>travelled without extra charges</p>
+            </div>
+          </li>
+
+          <li style={liHeadingStyle}>
+            <span>Excess Km Charges</span>
+            <div style={{ padding: "0px 25px 0px 10px" }}>
+              <p style={pTagContentStyle}>
+                Charges beyond the km limit
+                <span style={{ color: "black" }}>₹ 3.0/hr</span>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </>
+    );
+  }
+
   return (
     <>
       <div>
@@ -29,7 +84,6 @@ export const BikeCard = () => {
         <ToggleButtonGroup
           sx={{
             boxShadow: 1,
-            boxSizing: "border-box",
             overflow: "hidden",
             borderRadius: "0px",
           }}
@@ -68,115 +122,65 @@ export const BikeCard = () => {
               </ToggleButton>
             );
           })}
-          {/* <ToggleButton
-            sx={
-              alignment === "hourly"
-                ? {
-                    border: "none",
-                    fontWeight: "500",
-                    color: "black",
-                    margin: 0,
-                    paddingX: "11px",
-                    borderBottom: "2px solid #fed250",
-                  }
-                : {
-                    border: "none",
-                    fontWeight: "500",
-                    color: "black",
-                    margin: 0,
-                    paddingX: "11px",
-                    borderBottom: "2px solid transparent",
-                  }
-            }
-            value="Hourly"
-          >
-            Hourly
-          </ToggleButton>
-          <ToggleButton
-            sx={{
-              border: "none",
-              fontWeight: "500",
-              color: "black",
-              margin: 0,
-              padding: "0px",
-            }}
-            value="7Days"
-          >
-            7Days
-          </ToggleButton>
-          <ToggleButton
-            sx={{
-              border: "none",
-              fontWeight: "500",
-              color: "black",
-              margin: 0,
-              padding: "0px",
-            }}
-            value="15Days"
-          >
-            15Days
-          </ToggleButton>
-          <ToggleButton
-            sx={{
-              border: "none",
-              fontWeight: "500",
-              color: "black",
-              margin: 0,
-              padding: "0px",
-            }}
-            value="30Days"
-          >
-            30Days
-          </ToggleButton> */}
         </ToggleButtonGroup>
-        {/*Mon-Thu
-(Min 10 hrs booking)
-Booking Time (0- 24 hrs)₹ 20/hr
-Booking Time (>24 hrs)₹ 20/hr
-Fri-Sun
-(Min 24hrs booking)
-Booking Time (>24hrs)₹ 20/hr
-Extras
-Km limit5.0/hr
-Excess km charges₹ 4.0/km  */}
 
-        <div>
-          <ul style={{ textAlign: "left", paddingLeft: "5px" }}>
-            <li style={{ listStyle: "none", color: "black" }}>
-              Mon-Tue
-              <p style={{ fontSize: "10px", color: "grey" }}>
-                (Min 10 hrs booking)
-              </p>
-              <div style={{ padding: "0px 25px 0px 10px" }}>
-                <p
-                  style={{
-                    listStyle: "none",
-                    color: "#746e6e",
-                    fontSize: "11px",
-                    lineHeight: "2",
-                    display: "flex",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  Booking Time (0- 24 hrs)<span>₹ 20/hr</span>
+        <div
+          style={{
+            textAlign: "left",
+            height: "300px",
+            padding: "15px 10px 65px 10px",
+          }}
+        >
+          {alignment === "hourly" ? (
+            <ul>
+              <li style={liHeadingStyle}>
+                <span>Mon-Tue</span>
+                <p style={{ fontSize: "10px", color: "grey" }}>
+                  (Min 10 hrs booking)
                 </p>
-                <p
-                  style={{
-                    listStyle: "none",
-                    color: "#746e6e",
-                    fontSize: "11px",
-                    lineHeight: "2",
-                    display: "flex",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  Booking Time {"(>24 hrs)"}<span>₹ 20/hr</span>
+                <div style={{ padding: "0px 25px 0px 10px" }}>
+                  <p style={pTagContentStyle}>
+                    Booking Time (0- 24 hrs)
+                    <span style={{ color: "black" }}>₹ 20/hr</span>
+                  </p>
+                  <p style={pTagContentStyle}>
+                    Booking Time {"(>24 hrs)"}
+                    <span style={{ color: "black" }}>₹ 20/hr</span>
+                  </p>
+                </div>
+              </li>
+              <li style={liHeadingStyle}>
+                <span>Fri-Sat</span>
+                <p style={{ fontSize: "10px", color: "grey" }}>
+                  (Min 24 hrs booking)
                 </p>
-              </div>
-            </li>
-            <li style={{ listStyle: "none", color: "black" }}>Fri-Sat</li>
-            <li style={{ listStyle: "none", color: "black" }}>Extras</li>
-          </ul>
+                <div style={{ padding: "0px 25px 0px 10px" }}>
+                  <p style={pTagContentStyle}>
+                    Booking Time {"(>24 hrs)"}
+                    <span style={{ color: "black" }}>₹ 20/hr</span>
+                  </p>
+                </div>
+              </li>
+              {alignment === "hourly" ? (
+                <li style={liHeadingStyle}>
+                  <span>Extras</span>
+                  <div style={{ padding: "0px 25px 0px 10px" }}>
+                    <p style={pTagContentStyle}>
+                      Km limit<span style={{ color: "black" }}>₹ 5.0/hr</span>
+                    </p>
+                    <p style={pTagContentStyle}>
+                      Exes Km charges
+                      <span style={{ color: "black" }}>₹ 4.0/km</span>
+                    </p>
+                  </div>
+                </li>
+              ) : (
+                ""
+              )}
+            </ul>
+          ) : (
+            dayHandler(alignment)
+          )}
         </div>
 
         <Button
@@ -197,18 +201,13 @@ Excess km charges₹ 4.0/km  */}
       </div>
     </>
   );
-}
+};
 
 // import * as React from 'react';
 
-
 // export default function ColorToggleButton() {
-  
 
 //   return (
-    
+
 //   );
 // }
-
-
-

@@ -119,12 +119,12 @@ export const Checkout = () => {
           </div>
           <div className="minimum">
             <span>Minimum 24.0 hour charges applicable</span>
-            <span className="price"> ₹ 456</span>
+            <span className="price">₹ 456</span>
           </div>
 
           <div className="total">
             <span>Total</span>
-            <span className="price"> ₹ 456</span>
+            <span className="price">₹ 456</span>
           </div>
 
           <div className="helmet">
@@ -177,10 +177,10 @@ export const Checkout = () => {
                   <span style={{ marginTop: "-80px" }} className="garage-title ef" >Refundable Deposit</span>
                   <br />
                   <br />
-                  <span style={{ marginTop: "-80px" }} className="garage-title">{helmate ? "Extra Helmet" : null}</span>
+                  <span style={{ marginTop: "-60px" }} className="garage-title">{helmate ? "Extra Helmet" : null}</span>
                   <h6 className="garage-title amount ref" id="ref">Total Payable Amount</h6>
                </div>
-               <div style={{ marginLeft: "15%" }}>
+               <div style={{ marginLeft: "12%" }}>
                   <span>&#x20B9;{total}.00</span>
                   <br />
                   <br />
@@ -190,8 +190,8 @@ export const Checkout = () => {
                   <span>&#x20B9;1500.00</span>
                   <br />
                   <br />
-                  <span style={{ marginTop: "5px" }}>{helmate ? "₹" + 700 + ".00" : null}</span>
-                  <h3 style={{ marginTop: "-3px" }}>₹{helmate ? total + 700 + 4350 : total + 4350}.00</h3>
+                  <span style={{ marginTop: "5px" }}>{helmate ? "₹" + 70 + ".00" : null}</span>
+                  <h3 style={{ marginTop: "-3px" }}>₹{helmate ? total + 70 + 4350 : total + 4350}.00</h3>
                </div>
             </div>
             <Link to={`/checkout/paymentpage/${helmate ? total + 700 + 4350 : total + 4350}`} style={{ textDecoration: "none" }}>

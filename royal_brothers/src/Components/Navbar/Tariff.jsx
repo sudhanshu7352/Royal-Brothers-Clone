@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom"
+
 export const Tariff = () =>{
     return (
-        <div>
-        <p style={{color: 'black' ,marginLeft:'40px'}} >Tariff</p>
-        </div>
-    )
+      
+        <Link style={{textDecoration:"none",color:"black"}} to="/tariff">
+          <p style={{ color: "black", marginLeft: "40px" }}>Tariff</p>
+        </Link>
+      
+    );
 }
