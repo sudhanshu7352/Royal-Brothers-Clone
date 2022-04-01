@@ -30,7 +30,7 @@ export const Login = () => {
         </div>
 
         <button className="btn loginbutton">Login with Password</button>
-        <p>OR</p>
+        <p style={{margin:"20px"}} >OR</p>
         <button className="loginbutton">Login with OTP</button>
 
       </div>

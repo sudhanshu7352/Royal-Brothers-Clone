@@ -20,14 +20,15 @@
     display: flex;
     margin: auto;
     border-bottom: 1px solid rgb(209, 206, 206);
-    height:40px;
+    height:60px;
+    padding-top: 20px;
     font-size: 15px;
     font-weight: 700px;
 }
 
 .flex>p:first-child{
     width:50%;
-    height:65%;
+    font-weight: bolder;
     border-bottom: 5px solid #fecc00;
 }
 
@@ -36,6 +37,8 @@
 }
 
 .ph{
+    width: 135px;
+    margin-top: 20px;
     font-weight: 600px ;
     font-size: 12px;
 }
