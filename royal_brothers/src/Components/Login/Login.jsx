@@ -1,18 +1,21 @@
 import React from "react";
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
+import axios from "axios";
 
 export const Login = () => {
+
+  const navigate = useNavigate();
+
   const [captcha, setCaptcha] = React.useState(false);
 
   const [userDetails, setUserDetails] = React.useState({
-    number: "",
+    phone: "",
     password: "",
   });
 
   const handleChange = (e) => {
-    
     setUserDetails({
       ...userDetails,
       [e.target.name]: e.target.value,
@@ -21,9 +24,21 @@ export const Login = () => {
 
   const handleSubmit = (e) => {
     console.log(userDetails);
-    setUserDetails({
-    number: "",
-    password: "",
+
+    // login flow complete, connect redux, isAuth and token store remaining
+
+    axios.post("http://localhost/login", userDetails).then((res) => {
+      console.log(res.data);
+      alert("Login Successful");
+      navigate("/");
+      setUserDetails({
+        phone: "",
+        password: "",
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      alert("Login Failed");
     })
   };
 
@@ -52,10 +67,10 @@ export const Login = () => {
         <div className="phone">
           <input type="number" placeholder="+91" />
           <input
-            value={userDetails.number}
+            value={userDetails.phone}
             type="number"
             onChange={handleChange}
-            name="number"
+            name="phone"
           />
         </div>
 
@@ -77,7 +92,16 @@ export const Login = () => {
 
         {/* catcha work is pending */}
 
-        <ReCAPTCHA style={{width:"80%" ,margin:"auto" ,marginTop:"20px" , marginBottom:"-12px" }} sitekey="Your client site key" onChange={handleCaptcha} />
+        <ReCAPTCHA
+          style={{
+            width: "80%",
+            margin: "auto",
+            marginTop: "20px",
+            marginBottom: "-12px",
+          }}
+          sitekey="Your client site key"
+          onChange={handleCaptcha}
+        />
 
         <button onClick={handleSubmit} className="btn loginbutton">
           Login with Password
