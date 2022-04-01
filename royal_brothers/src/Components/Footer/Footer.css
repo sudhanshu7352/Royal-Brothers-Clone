@@ -27,6 +27,12 @@
     color:#dddddd;
     /* margin-bottom: 10px; */
 }
+.footer1>div>p{
+    /* font-size:13px;
+    font-weight:400px;
+    color:#dddddd; */
+    margin-bottom: 10px;
+}
 .imagesicon>img{
     margin-right: 40px;
 }
