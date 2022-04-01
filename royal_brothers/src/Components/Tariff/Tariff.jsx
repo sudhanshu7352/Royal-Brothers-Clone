@@ -31,19 +31,28 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export  function Tariff() {
   return (
-    <Box sx={{ flexGrow: 1,width:"80%",m:"auto"}}>
-      <Grid container spacing={6} >
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => {
-          return (
-            <Grid item xs={12} md={4} sm={6}>
-              <Item sx={{ padding: "0px",borderRadius:"7px",overflow:"hidden" }}>
-                <BikeCard key={index} />
-              </Item>
-            </Grid>
-          );
-        })}
-      </Grid>
-     </Box> 
+    <>
+      <h1 style={{margin:"10px 0px 30px 0px"}}>Bike rental tariffs in Bangalore</h1>
+      <Box sx={{ flexGrow: 1, width: "80%", m: "auto" }}>
+        <Grid container spacing={6}>
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => {
+            return (
+              <Grid item xs={12} md={4} sm={6}>
+                <Item
+                  sx={{
+                    padding: "0px",
+                    borderRadius: "7px",
+                    overflow: "hidden",
+                  }}
+                >
+                  <BikeCard key={index} />
+                </Item>
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Box>
+    </>
   );
 }
 

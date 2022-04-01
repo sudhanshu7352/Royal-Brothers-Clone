@@ -5,6 +5,8 @@
 .head{
     font-size: 26px;
     font-weight: 600px;
+     margin-bottom:20px;
+    font-weight:bold
 }
 
 .box{
@@ -19,24 +21,31 @@
     display: flex;
     margin: auto;
     border-bottom: 1px solid rgb(209, 206, 206);
-    height:40px;
+    padding-top: 20px;
     font-size: 15px;
     font-weight: 700px;
 }
 
 .flex1>p:first-child{
     width:50%;
+    color:grey;
 }
 
 .flex1>p:last-child{
-    width:50%;
+     width:50%;
     height:65%;
+    color: black;
+    font-weight: bolder;
     border-bottom: 5px solid #fecc00;
 }
 
 .ph{
-    font-weight: 600px ;
+    font-weight: bolder;
     font-size: 12px;
+    text-align: left;
+    padding: 10px;
+    padding-left: 50px;
+    padding-top: 20px;
 }
 
 .phone>input:first-child{
