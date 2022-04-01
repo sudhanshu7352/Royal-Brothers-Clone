@@ -1,0 +1,160 @@
+.main_box{
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.782);
+    font-weight: 600;
+}
+
+.left_div{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 50%;
+    height: 450px;
+    border-radius: 8px;
+    display: flex;
+    gap: 3%;
+    padding: 1%;
+  
+}
+.right_div{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 26%;
+    height: 350px;
+    border-radius: 8px;
+    /* font-family: Muli,sans sarif; */
+    
+}
+.img_div{
+    width: 32%;
+    /* border: 1px solid gray; */
+    height: 80%;
+}
+.info_div{
+    width: 66%;
+    /* border: 1px solid gray; */
+    margin-top: 3%;
+    height: 94%;
+    color: rgb(131, 127, 127);
+    font-weight: 400;
+ 
+}
+.summary{
+    margin-left: -33%;
+    font-size: 22px;
+}
+.img_div>img{
+    margin-top: 39%;
+    /* border: 1px solid gray; */
+    width: 100%;
+}
+.time{
+    display: flex;
+    border-bottom: 1px rgb(216, 211, 211) solid;
+   height: 20%;
+   width: 100%;
+   justify-content: space-between;
+}
+.time>div{
+    /* border: 1px solid red; */
+    height: 18%;
+    width: 160px;
+    padding: 4%;
+    margin-left: 7px;
+}
+.to{
+    margin-top: 30px;
+}
+.addres{
+    width: 100% ;
+    height: 28%;
+    font-weight: 300;
+    line-height: 19px;
+    text-align: start;
+    border-bottom: 1px solid rgb(208, 206, 206);
+    padding: 8px
+}
+.minimum{
+    text-align: start;
+   padding: 5px;
+}
+.price{
+    margin-left: 19%;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 17px;
+    margin-top: 10px;
+    padding-left:5px ;
+    font-weight: 600;
+    color: rgb(78, 65, 65);
+}
+.helmet{
+    /* display: flex; */
+    margin-top: 10px;
+   align-content: space-between;
+}
+.op{
+    width: 15%;
+    height: 26px;
+    margin-left: 160px;
+    border: 1px solid rgb(205, 201, 201);
+}
+.no-outline {
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid gray;
+    font-size: large;
+    height: 40px;
+    margin-top: 10px;
+  }
+  .no-outline+button{
+      font-size: 15px;
+     
+  }
+  .km_div{
+      /* margin-left: -80px; */
+      align-content: space-between;
+      
+  }
+  .display-checkout {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  .garage-title {
+    /* clear: both; */
+    display: inline-block;
+    /* overflow: hidden; */
+    white-space: nowrap;
+    margin-left: -34px;
+    /* border: 1px solid gray; */
+    
+  }
+  .right_div{
+    color: rgb(131, 127, 127);
+    font-weight: 400;
+ 
+  }
+  .amount{
+      font-size: 17px;
+      margin-top: -30px;
+     
+  }
+  #ref{
+      margin-left: 60px;
+  }
+  .ef{
+      margin-left: 21px;
+  }
+  .make{
+    height: 32px;
+    font-size: medium;
+  }
+  .check{
+      font-size:20px ;
+      margin-left: -50%;
+      margin-top: 6%;
+      color: rgb(99, 92, 92);
+  }

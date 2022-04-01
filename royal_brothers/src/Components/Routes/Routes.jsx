@@ -1,5 +1,6 @@
 import React from 'react'
 import {Routes as ROUTES, Route} from 'react-router-dom'
+import { Checkout } from '../Checkout/checkout'
 import { Footer } from '../Footer/Footer'
 import { Home } from '../Home/Home'
 import { Login } from '../Login/Login'
@@ -19,6 +20,7 @@ export const Routes = () => {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<SignUp />} />
         <Route exact path="/tariff" element={<Tariff/>} />
+        <Route exact path="/checkout" element={<Checkout/>} />
         {/* {Write all the routes here} */}
         <Route exact path="*" element={<NotFound />} />
       </ROUTES>
