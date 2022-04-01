@@ -100,7 +100,7 @@
     } 
     .footer1,.footer2,.footer3>div>p{
         font-size:13px;
-        margin-bottom: 5px;
+        /* margin-bottom: 5px; */
     }
     .imagesicon>img{
         margin-right: 25px;
