@@ -21,11 +21,11 @@
     margin-top: 60px;
 
 }
-div>p{
+.footer1,.footer2,.footer3>div>p{
     font-size:13px;
     font-weight:400px;
     color:#dddddd;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 .imagesicon>img{
     margin-right: 40px;
@@ -91,7 +91,7 @@ div>p{
         margin-top: 30px;
 
     } 
-    div>p{
+    .footer1,.footer2,.footer3>div>p{
         font-size:13px;
         margin-bottom: 5px;
     }

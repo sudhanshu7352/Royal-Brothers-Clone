@@ -11,6 +11,7 @@
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.5.1",
+    "@material-ui/icons": "^4.11.2",
     "@mui/material": "^5.5.3",
     "axios": "^0.26.1",
     "flat-carousel": "^0.0.1",
