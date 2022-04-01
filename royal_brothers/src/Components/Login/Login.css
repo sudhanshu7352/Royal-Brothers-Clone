@@ -3,9 +3,10 @@
 }
 
 .head{
-    margin-top: 0px;
     font-size: 26px;
     font-weight: 600px;
+    margin-bottom:20px;
+    font-weight:bold
 }
 
 .box{
