@@ -1,9 +1,13 @@
 import { FormatColorResetRounded } from "@mui/icons-material";
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams , useNavigate } from "react-router-dom";
 import "./checkout.css";
 
 export const Checkout = () => {
+
+   const navigate = useNavigate()
+
+
   const bookedBikeDetails = JSON.parse(
     localStorage.getItem("bookedBikeDetails")
   );
@@ -30,6 +34,33 @@ export const Checkout = () => {
 
     return netPaybleAmmount.toFixed(2);
   };
+
+  const handleCheckout = () => {
+
+   const checkoutDetails = {
+         pickUpDate: bookedBikeDetails.pickUpDate,
+         pickUpTime: bookedBikeDetails.pickUpTime,
+         dropOffDate: bookedBikeDetails.dropOffDate,
+         dropOffTime: bookedBikeDetails.dropOffTime,
+         totalPrice: bookedBikeDetails.totalPrice,
+         bikeId: bookedBikeDetails.bikeId,
+         image: bookedBikeDetails.image,
+         name: bookedBikeDetails.name,
+         hourly_rate: bookedBikeDetails.hourly_rate,
+         kilometer_limit: bookedBikeDetails.kilometer_limit,
+         helmetNo: helmetNo,
+         coupon: Coupon,
+         discount: Applied ? 10 : 1,
+         netPaybleAmmount: totalPaybleAmmount(),
+         deposit: 1500,
+         IGST: totalPaybleAmmount() * 0.28,
+         helmetPrice: helmetNo == 2 ? 100 : 0 
+   }
+
+   localStorage.setItem("checkoutDetails", JSON.stringify(checkoutDetails));
+   navigate("/payment")
+
+  }
 
   let date = JSON.parse(localStorage.getItem("date"));
   let time = JSON.parse(localStorage.getItem("time"));
@@ -254,22 +285,22 @@ export const Checkout = () => {
             <h3 style={{ marginTop: "-3px" }}>₹{totalPaybleAmmount()}</h3>
           </div>
         </div>
-        <Link to={`/payment`} style={{ textDecoration: "none" }}>
-          <button
-            className="make"
-            style={{
-              background: "#FFC600",
-              color: "black",
-              width: "80%",
-              border: "0",
-              borderRadius: "10px",
-            }}
-            variant="contained"
-            size="medium"
-          >
-            Make Payment
-          </button>
-        </Link>
+
+        <button
+          onClick={handleCheckout}
+          className="make"
+          style={{
+            background: "#FFC600",
+            color: "black",
+            width: "80%",
+            border: "0",
+            borderRadius: "10px",
+          }}
+          variant="contained"
+          size="medium"
+        >
+          Make Payment
+        </button>
       </div>
     </div>
   );

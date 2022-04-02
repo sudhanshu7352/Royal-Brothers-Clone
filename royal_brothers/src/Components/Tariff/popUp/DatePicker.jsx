@@ -83,7 +83,7 @@ export const DatePicker = ({ Schedule,handleChange }) => {
 
           <div style={{ width: "49%" }}>
             <TimePickerComponent
-             min={new Date(Schedule.dropOffDate || new Date())}
+             min={new Date()}
               style={{
                 fontWeight: "500",
                 fontSize: "15px",

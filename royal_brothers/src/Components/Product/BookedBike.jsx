@@ -53,11 +53,13 @@ export const BookedBike = (props) => {
         kilometer_limit:bikeDetails.kilometer_limit
       };
 
+      console.log(bookedBikeDetails);
+
       localStorage.setItem("bookedBikeDetails", JSON.stringify(bookedBikeDetails));
       navigate("/checkout")
 
 
-      console.log(bookedBikeDetails);
+      
     };
 
 
