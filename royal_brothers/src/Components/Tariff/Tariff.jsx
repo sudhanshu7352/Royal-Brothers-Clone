@@ -72,7 +72,7 @@ export  function Tariff() {
                         overflow: "hidden",
                       }}
                     >
-                      <BikeCard key={item._id} {...item} />
+                      <BikeCard key={item._id} item={item} />
                     </Item>
                   </Grid>
                 );

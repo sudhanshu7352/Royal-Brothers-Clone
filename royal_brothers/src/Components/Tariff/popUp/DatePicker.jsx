@@ -24,8 +24,10 @@ export const DatePicker = ({ Schedule,handleChange }) => {
 
   return (
     <>
-      <div >
-        <p style={{ fontWeight: "700", fontSize: "18px" ,lineHeight:4}}>Pickup</p>
+      <div>
+        <p style={{ fontWeight: "700", fontSize: "18px", lineHeight: 4 }}>
+          Pickup
+        </p>
         <div style={{ display: "flex" }}>
           <div style={{ width: "49%" }}>
             <DatePickerComponent
@@ -43,7 +45,7 @@ export const DatePicker = ({ Schedule,handleChange }) => {
           </div>
           <div style={{ width: "49%" }}>
             <TimePickerComponent
-              min={new Date(Date.now())}
+              min={new Date(Schedule.pickUpDate)}
               style={{
                 fontWeight: "500",
                 fontSize: "15px",
@@ -59,7 +61,9 @@ export const DatePicker = ({ Schedule,handleChange }) => {
       </div>
 
       <div>
-        <p style={{ fontWeight: "700", fontSize: "18px",lineHeight:4 }}>Dropoff</p>
+        <p style={{ fontWeight: "700", fontSize: "18px", lineHeight: 4 }}>
+          Dropoff
+        </p>
 
         <div style={{ display: "flex" }}>
           <div style={{ width: "49%" }}>
@@ -79,7 +83,7 @@ export const DatePicker = ({ Schedule,handleChange }) => {
 
           <div style={{ width: "49%" }}>
             <TimePickerComponent
-              min={new Date().setHours(5, 0, 0, 0)}
+             min={new Date(Schedule.dropOffDate || new Date())}
               style={{
                 fontWeight: "500",
                 fontSize: "15px",

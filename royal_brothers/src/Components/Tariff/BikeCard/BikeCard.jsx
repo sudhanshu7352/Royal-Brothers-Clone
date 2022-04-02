@@ -5,6 +5,10 @@ import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import { SchedulePopUp } from "../popUp/SchedulePopUp";
 
 export const BikeCard = ({
+ item
+}) => {
+
+  const {
   name,
   image,
   location,
@@ -15,7 +19,9 @@ export const BikeCard = ({
   dropOffDate,
   dropOffTime,
   _id,
-}) => {
+} = item;
+
+  
   const [alignment, setAlignment] = React.useState("hourly");
 
   const [isAvailable, setIsAvailable] = React.useState(
@@ -198,7 +204,7 @@ export const BikeCard = ({
           )}
         </div>
 
-        <SchedulePopUp isAvailable={isAvailable}/>
+        <SchedulePopUp isAvailable={isAvailable} item={item}/>
       </div>
     </>
   );

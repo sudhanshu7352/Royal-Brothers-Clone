@@ -10,6 +10,7 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
 import { DatePicker } from "./DatePicker";
+import { useNavigate } from "react-router-dom";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -49,7 +50,12 @@ BootstrapDialogTitle.propTypes = {
   onClose: PropTypes.func.isRequired,
 };
 
-export function SchedulePopUp({isAvailable}) {
+export function SchedulePopUp({isAvailable,item}) {
+
+  const navigate = useNavigate()
+
+
+
   const [open, setOpen] = React.useState(false);
 
    const [Schedule, setSchedule] = React.useState({
@@ -71,6 +77,17 @@ export function SchedulePopUp({isAvailable}) {
   };
   const handleClose = () => {
     console.log(Schedule);
+
+    const newSchedule = {
+      pickUpDate: new Date(Schedule.pickUpDate).toUTCString(),
+      pickUpTime: new Date(Schedule.pickUpTime).toTimeString(),
+      dropOffDate: new Date(Schedule.dropOffDate).toUTCString(),
+      dropOffTime: new Date(Schedule.dropOffTime).toTimeString(),
+    };
+
+    console.log(newSchedule);
+    localStorage.setItem("bikeScheduleDetails", JSON.stringify(Schedule));
+    localStorage.setItem("bikeDetails", JSON.stringify(item));
     setSchedule({
      pickUpDate: "",
      pickUpTime: "",
@@ -78,6 +95,8 @@ export function SchedulePopUp({isAvailable}) {
      dropOffTime: "",
    })
     setOpen(false);
+    navigate("/product")
+
   };
 
   return (
