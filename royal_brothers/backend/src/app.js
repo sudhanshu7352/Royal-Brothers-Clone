@@ -14,15 +14,21 @@ const port = process.env.PORT || 80;
 
 const { login, register } = require("./controllers/auth.controller");
 
+const bikeController = require("./controllers/bike.controller");
+
 
 app.use(cors(corsOptions));
 
 app.use(express.json());
 
+app.use("/bikes", bikeController);
+
 
 app.post("/register", register);
 
 app.post("/login", login);
+
+
 
 app.listen(port, async () => {
     try{
