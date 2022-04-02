@@ -33,7 +33,7 @@ export const CreditCard = () => {
       }
       else {
          alert("YOUR PAYMENT IS SUCCESSFUL😍")
-         // history("/thanks")
+         history("/thanks")
       }
    }
 
