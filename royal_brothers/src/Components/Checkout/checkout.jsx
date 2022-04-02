@@ -16,7 +16,7 @@ export const Checkout = () => {
 
   const [Coupon, setCoupon] = useState("");
 
-  const [Applied, setApplied] = useState(false)
+  const [Applied, setApplied] = useState(false);
 
   const totalPaybleAmmount = () => {
     const total = bookedBikeDetails.totalPrice;
@@ -73,10 +73,10 @@ export const Checkout = () => {
     e.preventDefault();
 
     if (Coupon === "royal10") {
-     setApplied(true)
+      setApplied(true);
       alert("Congratulations!🎉 Your Coupon Is Applied");
     } else {
-     setApplied(false);
+      setApplied(false);
 
       alert("Invalid Coupon😞");
     }
@@ -254,12 +254,7 @@ export const Checkout = () => {
             <h3 style={{ marginTop: "-3px" }}>₹{totalPaybleAmmount()}</h3>
           </div>
         </div>
-        <Link
-          to={`/checkout/paymentpage/${
-            helmate ? total + 700 + 4350 : total + 4350
-          }`}
-          style={{ textDecoration: "none" }}
-        >
+        <Link to={`/payment`} style={{ textDecoration: "none" }}>
           <button
             className="make"
             style={{
