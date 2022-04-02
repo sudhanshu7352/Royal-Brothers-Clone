@@ -10,3 +10,113 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .citybtn:hover{background-color: #f3d071;}
+
+
+.close{
+  border-radius: 50%;
+  border: transparent;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  background-color: #ddd;
+  width: 1.5em;  
+  height: 1.5em;  
+  transition: transform .9s ease-in-out;  
+  margin-top: 10px;
+}
+
+.close:hover{
+  transition: transform .9s ease-in-out;
+    background:url("imageThatAppearsAfterHovering.png");
+    -o-transform:rotate(720deg);
+    -ms-transform:rotate(720deg);
+    -moz-transform:rotate(720deg);
+    -webkit-transform:rotate(720deg);
+    transform:rotate(720deg); /* How many times it'll rotate = degrees÷360 */
+}
+
+
+
+.royalHead{
+  display: flex;
+  justify-content: center;
+}
+
+
+.pipe{
+  border-left: 2px solid #000;
+    height: 1.5rem;
+    border-radius: 30px;
+    margin: 15px;
+    margin-top: 12px;
+}
+
+.bikeP{
+  margin-top: 12px;
+  font-family: "Muli", sans-serif;
+  font-weight: 550;
+}
+
+.header__search{
+  width: 96%;
+  margin: auto;
+}
+.header__searchInput{
+  margin-left: -30px;
+}
+
+.citiesName{
+  display: flex;
+  flex-wrap: wrap;
+  margin:20px;
+  margin-left: 40px;
+  transition: all 0.2s;
+  background-size: cover;
+  
+}
+
+.citiesDiv{
+  border-radius: 10px;
+  margin: 10px;
+  transition: 1s ease;
+ 
+}
+.citiesDiv:hover{
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+      transition: 1s ease;
+      cursor: pointer;
+
+}
+.Container>a :hover{
+
+      transition: 0.3s ease;
+      cursor: pointer;
+
+}
+
+
+a{
+  text-decoration: none;
+}
+
+.Container{
+  position: relative;
+  text-align: center;
+
+}
+
+
+.cityName {
+  font-size: 1rem;
+  line-height: 1.2;
+  text-transform: unset;
+  color: #fff;
+  position: absolute;
+  top: 79%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
