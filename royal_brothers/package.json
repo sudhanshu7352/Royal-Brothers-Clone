@@ -14,6 +14,7 @@
     "@material-ui/icons": "^4.11.2",
     "@mui/icons-material": "^5.5.1",
     "@mui/material": "^5.5.3",
+    "@syncfusion/ej2-react-calendars": "^19.4.56",
     "axios": "^0.26.1",
     "flat-carousel": "^0.0.1",
     "react": "^17.0.2",
