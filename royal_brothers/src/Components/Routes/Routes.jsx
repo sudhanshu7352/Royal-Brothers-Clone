@@ -12,6 +12,7 @@ import { Tariff } from '../Tariff/Tariff'
 import {Payment} from '../Payment/Payment'
 import { Product } from "../Product/product";
 import {Thanks} from "../Thanks/Thanks"
+// import {Logout} from "../Logout/Logout"
 
 export const Routes = () => {
   return (
@@ -28,6 +29,7 @@ export const Routes = () => {
         <Route exact path="/tariff" element={<Tariff />} />
         <Route exact path="/product" element={<Product />} />
         <Route exact path="/thanks" element={<Thanks/>} />
+        {/* <Route exact path="/logout" element={<Logout />} /> */}
         {/* {Write all the routes here} */}
         <Route exact path="*" element={<NotFound />} />
       </ROUTES>

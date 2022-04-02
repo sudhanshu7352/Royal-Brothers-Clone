@@ -69,12 +69,11 @@ export const CreditCard = () => {
 
             <div className="card card-header">
                {error && <span style={{ color: "red" }}>{error}</span>}
-               <label className="cardnum">Card Number</label>
-               <br />
+               <label style={{display: "block", width:'165px'}} className="cardnum">Card Number</label>
+            
                <input name="card" value={card} onChange={handleInputChange} type="text" maxLength={16} className="credit-card-inp" placeholder="Enter your card number" />
                <br />
-               <label className="cardnum">Name on the card</label>
-               <br />
+               <label style={{display: "block", width:'190px'}} className="cardnum">Name on the card</label>
                <input name="name" value={name} onChange={handleInputChange} type="text" className="credit-card-inp" placeholder="Enter Name on the card" />
                <br />
 

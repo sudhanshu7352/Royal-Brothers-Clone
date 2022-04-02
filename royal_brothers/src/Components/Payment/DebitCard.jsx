@@ -18,10 +18,10 @@ export const DebitCard = () =>{
 
     <br/>
     <div className="card card-header credit-card-model">
-       <label className="cardnum">Card Number</label>
+       <label style={{display: "block", width:'165px'}} className="cardnum">Card Number</label>
        <input type="text" className="credit-card-inp" placeholder="Enter your card number"/>
        <br/>
-       <label className="cardnum">Name on the card</label>
+       <label style={{display: "block", width:'190px'}} className="cardnum">Name on the card</label>
        <input type="text" className="credit-card-inp" placeholder="Enter Name on the card"/>
        <br/>
     
