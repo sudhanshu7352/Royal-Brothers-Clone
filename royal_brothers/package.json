@@ -13,6 +13,7 @@
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
     "@mui/icons-material": "^5.5.1",
+    "react-countdown-circle-timer": "^2.5.4",
     "@mui/material": "^5.5.3",
     "axios": "^0.26.1",
     "flat-carousel": "^0.0.1",

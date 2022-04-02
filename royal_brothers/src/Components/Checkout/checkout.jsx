@@ -194,7 +194,8 @@ export const Checkout = () => {
                   <h3 style={{ marginTop: "-3px" }}>₹{helmate ? total + 70 + 4350 : total + 4350}.00</h3>
                </div>
             </div>
-            <Link to={`/checkout/paymentpage/${helmate ? total + 700 + 4350 : total + 4350}`} style={{ textDecoration: "none" }}>
+            {/* /checkout/paymentpage/${helmate ? total + 700 + 4350 : total + 4350} */}
+            <Link to={`/payment`} style={{ textDecoration: "none" }}>
                <button className="make" style={{ background: "#FFC600", color: "black", width: "80%",border:"0",borderRadius:"10px" }} variant="contained" size="medium">
                   Make Payment
                </button>
