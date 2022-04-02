@@ -5,9 +5,13 @@ import Paper from "@mui/material/Paper";
 import axios from "axios";
 import SearchIcon from "@material-ui/icons/Search";
 import { Link } from "react-router-dom";
+import { BookedBike } from "./BookedBike";
 
 export const Product = () => {
   const [data, setdata] = React.useState([]);
+
+  
+
 
 
   React.useEffect(() => {
@@ -16,11 +20,13 @@ export const Product = () => {
 
   const getdata = () => {
     axios
-      .get("https://royalbrothers-backend.herokuapp.com/api/bikes")
-      .then((res) => setdata(res.data.bikes));
+      .get("http://localhost/bikes")
+      .then((res) => setdata(res.data.data));
 
-    console.log(data);
+   
   };
+
+   console.log(data);
 
   return (
     <div className="mainContainer">
@@ -61,7 +67,11 @@ export const Product = () => {
               <div className="datetime">
                 <div className="Dateandtime">
                   <label>Pickup date</label>
-                  <input type={"date"} style={{ width: "90%" }} />
+                  <input
+                    type={"date"}
+                    style={{ width: "90%" }}
+                    placeholder={""}
+                  />
                 </div>
 
                 <div className="Dateandtime">
@@ -167,7 +177,19 @@ export const Product = () => {
             </div>
 
             <div className="overflow">
-              <div>
+              {data.map((item) => {
+                return (
+                  <>
+                    <div>
+                      <input type="checkbox" value={item.name} />
+                      &nbsp; {item.name}
+                    </div>
+                    <hr />
+                  </>
+                );
+              })}
+
+              {/* <div>
                 <input type="checkbox" value={"Yamaha Fascino"} />
                 &nbsp; Yamaha Fascino
               </div>
@@ -613,7 +635,7 @@ export const Product = () => {
                 <input type="checkbox" value={"Yezdi Scrambler"} />
                 &nbsp; Yezdi Scrambler
               </div>
-              <hr />
+              <hr /> */}
             </div>
           </div>
 
@@ -625,57 +647,29 @@ export const Product = () => {
         {/* right side div start here */}
 
         <div className="secondmain">
+          {localStorage.getItem("bikeDetails") ? (
+            <div>
+              <BookedBike item={false} />
+            </div>
+          ) : (
+            ""
+          )}
+
+          {localStorage.getItem("bikeDetails") ? (
+            <>
+              <p style={{padding:"4px"}}>Suggested Results</p>
+              <hr />
+            </>
+          ) : (
+            ""
+          )}
+
           <div>
             {data.map((e) => {
               return (
-                <div className="mapbikes" key={e._id}>
-                  <div>
-                    <img
-                      className="imgData"
-                      src="https://d36g7qg6pk2cm7.cloudfront.net/assets/zero-deposit-8bf3350f651efc75cb1e263459707c81cdd271347d2ba925cd2eb740243474d5.png"
-                      alt=""
-                      width={"26px"}
-                    />
-                    <span className="spanZero">zero deposit</span>
-                  </div>
-                  <br />
-                  <h6>{e.model}</h6>
-                  <div className="imbikes">
-                    {" "}
-                    <img src={e.imageUrl} alt="" />{" "}
-                  </div>
-                  <br />
-                  <p className="available">Available at</p> <br />
-                  <select>
-                    <option value="">Location</option>
-                    {e.locations.map((s) => {
-                      return <option value="">{s.name}</option>;
-                    })}
-                  </select>
-                  <div className="timingbike">
-                    <div>
-                      <p className="arrivetime">11:30 am</p>
-                      <p className="arrivetime">{new Date().toDateString()}</p>
-                    </div>
-                    <div className="timingTo">to</div>
-                    <div>
-                      <p className="arrivetime">10:30 pm</p>
-                      <p className="arrivetime">{new Date().toDateString()}</p>
-                    </div>
-                  </div>
-                  <div className="prizebike">
-                    <div>
-                      <p>₹{e.pricePerHour}</p>
-                      <span>(100 KM included)</span>
-                    </div>
-                      {/* <Link to="/checkout">
-                      </Link> */}
-                    <div>
-                      <button  className="Boo">Book </button>
-                     
-                    </div>
-                  </div>
-                </div>
+                <>
+                  <BookedBike item={e}/>
+                </>
               );
             })}
           </div>
