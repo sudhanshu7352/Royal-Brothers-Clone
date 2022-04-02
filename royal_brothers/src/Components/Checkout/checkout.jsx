@@ -91,15 +91,15 @@ export const Checkout = () => {
           <div>
           <div className="time">
             <div className="start_time">
-              <p>08:00 pm</p>
-              <p>31 Mar 2022</p>
+              <p>{time}</p>
+              <p>{date}</p>
             </div>
            
 
             <p className="to">to</p>
             <div className="end_time">
-              <span>10:00 am</span><br />
-              <span>01 Apr 2022</span>
+              <span>{dtime}</span><br />
+              <span>{ddate}</span>
             </div>
            
           </div>
