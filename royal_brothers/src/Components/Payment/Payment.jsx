@@ -33,7 +33,7 @@ export const Payment = () => {
                         <div style={{width:'227px', borderBottom:'1px solid lightgrey', padding:'10px 0'}}><img onClick={() => setShow("paytm")} style={{ width: "30%", margin: "auto" }} src="https://d36g7qg6pk2cm7.cloudfront.net/assets/paytm_logo-fa816f9adc5494b20bd1d42dde2a740ecf907e3514f3a3ffab3f680fe0e80256.png" alt="test" /></div>
                   </div>              
                   <div className="child-card-2" >
-                  {show === "creditcard" ? <CreditCard /> : show === "debitcard" ? <DebitCard /> : show === "paytm" ? <Paytm />  : show === "upi" ? <Upi /> : show === "netbanking" ? <Netbanking /> : <CreditCard />}
+                  {show === "creditcard" ? <CreditCard /> : show === "debitcard" ? <DebitCard /> : show === "paytm" ? <Paytm />  : show === "upi" ? <Upi /> : <CreditCard />}
                   </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@ export const Payment = () => {
                         <p><b>₹{amount}.00</b></p>
                     </div>
                 </div>
-                <div style={{margin:'100px 0px 0px 140px'}}>
+                <div className="count-down">
                     <CountdownCircleTimer
                         isPlaying
                         duration={180}

@@ -124,6 +124,10 @@
     padding-left: 15px;
 }
 
+.count-down{
+    margin: 100px 0px 0px 140px;
+}
+
 .make-payment{
     background-color: #fed250;
     font-size:13px;
@@ -136,6 +140,48 @@
 }
 
 
+@media only screen and (min-width:390px) and (max-width:768px){
+    .main{
+        display: grid;
+    }
+    #cards{
+        width:80%;
+        margin: auto;
+        margin-top:40px;
+    }
+    .secondry-card{
+        width: 150%;
+        height: 130px;
+        margin-left:60%;
+
+    }
+    .count-down{
+        /* style={{margin:'100px 0px 0px 140px'}} */
+        margin: 60px 0px 20px 350px;
+    }
+}
+
+
+@media only screen and (min-width:0px) and (max-width:390px){
+    #cards{
+        margin:auto;
+        margin-top:30px;
+    }
+    .child-card{
+        width: 100%;
+    }
+    .secondry-card{
+        width: 250%;
+        margin-left:40%;
+    }
+    .child-card-2{
+        display: none;
+    }
+    .count-down{
+        /* style={{margin:'100px 0px 0px 140px'}} */
+        margin: 40px 0px 20px 120px;
+    }
+}
 
 
 
