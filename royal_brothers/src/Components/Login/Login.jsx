@@ -12,6 +12,10 @@ import axios from "axios";
 
 export const Login = () => {
 
+  const bikeScheduleDetails = JSON.parse(
+    localStorage.getItem("bikeScheduleDetails") || false
+  );
+
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
@@ -49,12 +53,18 @@ export const Login = () => {
           phone: "",
           password: "",
         });
-        navigate("/");
+
+        if (!bikeScheduleDetails){
+          navigate("/");
+          return
+        }
+        
+        navigate("/product");
       })
       .catch((err) => {
         console.log(err);
         alert("Login Failed");
-        dispatch(loginFailure(err));
+        dispatch(loginFailure());
       });
   };
 

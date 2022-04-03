@@ -302,16 +302,16 @@
       padding: 3%;
     }
     .arrivetime{
-      font-size: 14px;
+      font-size: 11px;
       font-weight: 500;
     }
     .timingTo {
       background-color: black;
       color: white;
-      width: 50px;
+      width: 30px;
       height: 30px;
       text-align: center;
-      border-radius: 99%;   
+      border-radius: 50%;   
       margin-top: 10%;
       padding-top: 0.5%;
     }
