@@ -1,5 +1,7 @@
 .main_box{
-    display: flex;
+    display: grid;
+    grid-template-columns: 62% 29%;
+    /* width: 100%; */
     justify-content: center;
     gap: 9px;
     font-family: sans-serif;
@@ -10,29 +12,30 @@
 
 .left_div{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 50%;
+    /* width: 50%; */
     height: 450px;
     border-radius: 8px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 32% 66%;
     gap: 3%;
     padding: 1%;
   
 }
 .right_div{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: 29%;
+    /* width: 29%; */
     height: 370px;
     border-radius: 8px;
     /* font-family: Muli,sans sarif; */
     
 }
 .img_div{
-    width: 32%;
+    /* width: 32%; */
     /* border: 1px solid gray; */
     height: 80%;
 }
 .info_div{
-    width: 66%;
+    /* width: 66%; */
     /* border: 1px solid gray; */
     margin-top: 3%;
     height: 94%;
@@ -53,13 +56,14 @@
     display: flex;
     border-bottom: 1px rgb(216, 211, 211) solid;
    height: 20%;
-   width: 100%;
+   width: 92%;
+   /* border: 1px solid red; */
    justify-content: space-between;
 }
 .time>div{
     /* border: 1px solid red; */
     height: 18%;
-    width: 160px;
+    width: 26%;
     padding: 4%;
     margin-left: 7px;
 }
@@ -159,3 +163,53 @@
       margin-top: 6%;
       color: rgb(99, 92, 92);
   }
+  .coupon_button{
+      cursor: pointer;
+       background: #fed250
+  }
+  .coupon_button:hover{
+      background: #e7b110c9;
+      border: 1px solid red;
+  }
+  .make{
+    background: #fed250;
+    cursor: pointer;
+  }
+  .make:hover{
+      background:#e7b110c9 ;
+  }
+  @media screen and (max-width: 768px) {  
+    .main_box{
+       
+        grid-template-columns: 90%;
+        width: 768px;
+        /* grid-template-rows: 500px 200px; */
+      
+       
+        /* margin-top: -10px; */
+    }
+    /* .left_div{
+        border-left: 40%;
+    } */
+}
+@media screen and (max-width: 400px) { 
+    .main_box{
+       
+        grid-template-columns: 98%;
+        width: 390px;
+        /* justify-content: center; */
+        /* grid-template-rows: 500px 200px; */
+      
+       
+        /* margin-top: -10px; */
+    }
+    .left_div{
+        height: 1100px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 40% 60%;
+    }
+    .summary{
+        margin: 2%;
+    }
+}

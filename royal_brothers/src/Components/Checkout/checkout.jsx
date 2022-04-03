@@ -142,8 +142,9 @@ export const Checkout = () => {
                            placeholder="Coupan Code"
                         />
                         <button variant="contained" size="medium"
+                         className="coupon_button"
                            type="button"
-                           style={{ border:"0",borderRadius:"10px",width: "28%", background: "#FFC600", color: "black", height: "32px", marginTop: "20px" }}
+                           style={{ border:"0",borderRadius:"10px",width: "28%", color: "black", height: "32px", marginTop: "20px" }}
                            onClick={handleCoupan}
                         >Apply</button>
                      </div>
@@ -195,7 +196,7 @@ export const Checkout = () => {
                </div>
             </div>
             <Link to={`/checkout/paymentpage/${helmate ? total + 700 + 4350 : total + 4350}`} style={{ textDecoration: "none" }}>
-               <button className="make" style={{ background: "#FFC600", color: "black", width: "80%",border:"0",borderRadius:"10px" }} variant="contained" size="medium">
+               <button className="make" style={{color: "black", width: "80%",border:"0",borderRadius:"10px" }} variant="contained" size="medium">
                   Make Payment
                </button>
             </Link>
