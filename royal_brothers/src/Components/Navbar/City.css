@@ -5,11 +5,11 @@
   padding: 0px 19px 10px;
   border-radius: 4px;
   font-size: 14px;
-  border: 2px solid #f3d071;
+  border: 2px solid #fed250;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.citybtn:hover{background-color: #f3d071;}
+.citybtn:hover{background-color:  #fed250c9;}
 
 
 .close{
