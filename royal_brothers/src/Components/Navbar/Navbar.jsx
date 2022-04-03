@@ -26,6 +26,9 @@ import {Offers} from "./Offers"
 import {DropDown2} from "./DropDown2"
 import {City} from './City'
 import {Link} from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux";
+import {Logout} from "../Logout/Logout"
+
 
 
 
@@ -82,6 +85,8 @@ export  function Navbar() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
+   const { isLogin } = useSelector((state) => state);
+
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -106,20 +111,51 @@ export  function Navbar() {
             <MenuIcon />
           </IconButton>
           <Logo />
-          <Pic/>
+          <Pic />
           <Tariff />
           <DropDownMenu />
-          <Offers/>
-          <DropDown2/>
-          <City/>
-          <p style={{color: "black" , marginLeft:"20px" , marginRight:"25px"}} >|</p>
-          <Link to="/login" style={{textDecoration:"none", color:"gray" , fontSize:"14px" , marginRight:"15px"}} >Login</Link>
-          <Link to="/register" style={{textDecoration:"none" , color:"black" , backgroundColor:"#f3d071" ,padding:"10px", fontSize:"14px" , borderRadius:"5px"}}>Sign up</Link>
+          <Offers />
+          <DropDown2 />
+          <City />
+          <p
+            style={{ color: "black", marginLeft: "20px", marginRight: "25px" }}
+          >
+            |
+          </p>
 
+          {isLogin.data ? (
+            <Logout name={isLogin.data.user.name}/>
+          ) : (
+            <>
+              <Link
+                to="/login"
+                style={{
+                  textDecoration: "none",
+                  color: "gray",
+                  fontSize: "14px",
+                  marginRight: "15px",
+                }}
+              >
+                Login
+              </Link>
+              <Link
+                to="/register"
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  backgroundColor: "#fed250",
+                  padding: "10px",
+                  fontSize: "14px",
+                  borderRadius: "5px",
+                }}
+              >
+                Sign up
+              </Link>
+            </>
+          )}
         </Toolbar>
       </AppBar>
-      
-     
+
       <Drawer
         sx={{
           width: drawerWidth,
@@ -144,7 +180,7 @@ export  function Navbar() {
             )}
           </IconButton>
         </DrawerHeader>
-        
+
         <List sx={{ p: 1.5 }}>
           {[
             "Login | Sign up",
@@ -160,14 +196,12 @@ export  function Navbar() {
           ].map((text, index) => (
             <>
               <ListItem button key={text}>
-               
                 <ListItemText primary={text} />
               </ListItem>
               <Divider />
             </>
           ))}
         </List>
-        
       </Drawer>
       <Main open={open}>
         <DrawerHeader />

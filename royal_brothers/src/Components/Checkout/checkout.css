@@ -168,7 +168,7 @@
        background: #fed250
   }
   .coupon_button:hover{
-      background: #e7b110c9;
+      background: #fed250c9;
       border: 1px solid red;
   }
   .make{
@@ -176,7 +176,7 @@
     cursor: pointer;
   }
   .make:hover{
-      background:#e7b110c9 ;
+      background:#fed250c9 ;
   }
   @media screen and (max-width: 768px) {  
     .main_box{

@@ -7,7 +7,7 @@
     
   .headbikes {
       width: 100%;
-      background-color: rgb(254, 210, 80);
+      background-color: #fed250;
       text-align: center;
       padding: 0.5%;
       
@@ -69,7 +69,7 @@
   
     #bottomVBtnHover :hover{
       padding-bottom: 11.5px;
-      border-bottom: 3px solid rgb(204, 204, 32);
+      border-bottom: 3px solid #fed250c9;
     }
     
     .container {

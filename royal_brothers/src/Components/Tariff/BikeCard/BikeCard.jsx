@@ -2,9 +2,31 @@ import React from "react";
 import Button from "@mui/material/Button";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
+import { SchedulePopUp } from "../popUp/SchedulePopUp";
 
-export const BikeCard = () => {
+export const BikeCard = ({
+ item
+}) => {
+
+  const {
+  name,
+  image,
+  location,
+  kilometer_limit,
+  hourly_rate,
+  pickUpTime,
+  pickUpDate,
+  dropOffDate,
+  dropOffTime,
+  _id,
+} = item;
+
+  
   const [alignment, setAlignment] = React.useState("hourly");
+
+  const [isAvailable, setIsAvailable] = React.useState(
+    pickUpDate && dropOffDate && new Date(dropOffDate) < new Date()
+  );
 
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);
@@ -27,8 +49,8 @@ export const BikeCard = () => {
   };
 
   const dayHandler = (days) => {
-    if(days==="7Days") days = 7;
-    else if(days==="30Days") days = 30;
+    if (days === "7Days") days = 7;
+    else if (days === "30Days") days = 30;
     else days = 15;
 
     return (
@@ -39,7 +61,9 @@ export const BikeCard = () => {
             <div style={{ padding: "0px 25px 0px 10px" }}>
               <p style={pTagContentStyle}>
                 Price for {days} Days
-                <span style={{ color: "black" }}>₹ {days * (20 * 11)}</span>
+                <span style={{ color: "black" }}>
+                  ₹ {days * (hourly_rate * 11)}
+                </span>
               </p>
             </div>
           </li>
@@ -48,7 +72,9 @@ export const BikeCard = () => {
             <div style={{ padding: "0px 25px 0px 10px" }}>
               <p style={pTagContentStyle}>
                 No of kms in {days} days that can be
-                <span style={{ color: "black" }}>{days * 110 } km</span>
+                <span style={{ color: "black" }}>
+                  {Math.floor((days / 7) * kilometer_limit)} km
+                </span>
               </p>
               <p style={pTagContentStyle}>travelled without extra charges</p>
             </div>
@@ -59,26 +85,21 @@ export const BikeCard = () => {
             <div style={{ padding: "0px 25px 0px 10px" }}>
               <p style={pTagContentStyle}>
                 Charges beyond the km limit
-                <span style={{ color: "black" }}>₹ 3.0/hr</span>
+                <span style={{ color: "black" }}>₹ 3.0/km</span>
               </p>
             </div>
           </li>
         </ul>
       </>
     );
-  }
+  };
 
   return (
     <>
       <div>
         <div style={{ padding: "10px" }}>
-          <h4 style={{ color: "black", paddingBottom: "10px" }}>
-            Yamaha Fascino
-          </h4>
-          <img
-            src="https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/026/medium/Fascino-min_2.png?1519738927"
-            alt=""
-          />
+          <h4 style={{ color: "black", paddingBottom: "10px" }}>{name}</h4>
+          <img src={image} alt="" width={name === "Pulsar" ? "70%" : "80%"} />
         </div>
         {/*  */}
         <ToggleButtonGroup
@@ -141,11 +162,11 @@ export const BikeCard = () => {
                 <div style={{ padding: "0px 25px 0px 10px" }}>
                   <p style={pTagContentStyle}>
                     Booking Time (0- 24 hrs)
-                    <span style={{ color: "black" }}>₹ 20/hr</span>
+                    <span style={{ color: "black" }}>₹ {hourly_rate}/hr</span>
                   </p>
                   <p style={pTagContentStyle}>
                     Booking Time {"(>24 hrs)"}
-                    <span style={{ color: "black" }}>₹ 20/hr</span>
+                    <span style={{ color: "black" }}>₹ {hourly_rate}/hr</span>
                   </p>
                 </div>
               </li>
@@ -157,7 +178,7 @@ export const BikeCard = () => {
                 <div style={{ padding: "0px 25px 0px 10px" }}>
                   <p style={pTagContentStyle}>
                     Booking Time {"(>24 hrs)"}
-                    <span style={{ color: "black" }}>₹ 20/hr</span>
+                    <span style={{ color: "black" }}>₹ {hourly_rate}/hr</span>
                   </p>
                 </div>
               </li>
@@ -183,31 +204,8 @@ export const BikeCard = () => {
           )}
         </div>
 
-        <Button
-          sx={{
-            width: "100%",
-            backgroundColor: "#fed250",
-            color: "black",
-            fontWeight: "500",
-            borderRadius: "0px",
-            "&:hover": {
-              backgroundColor: "#fed250c9",
-            },
-          }}
-          variant="contained"
-        >
-          Book Now
-        </Button>
+        <SchedulePopUp isAvailable={isAvailable} item={item}/>
       </div>
     </>
   );
 };
-
-// import * as React from 'react';
-
-// export default function ColorToggleButton() {
-
-//   return (
-
-//   );
-// }

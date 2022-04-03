@@ -48,7 +48,7 @@
     width: 90%;
     height: 11%;
     margin-top: 10%;
-    background-color: #ffd250;
+    background-color: #fed250;
     border: 0;
     border-radius: 10px;
     font-size: 16px;
@@ -56,7 +56,7 @@
    
 }
 .search_button:hover{
-    background-color: #e4ac06;
+    background-color:  #fed250c9;
     cursor: pointer;
 }
 .info{
@@ -107,7 +107,7 @@
 .bikes>div>button{
     width: 100%;
     border: 0;
-    background-color: #ffd250;
+    background-color: #fed250;
     padding: 4px;
     border-radius: 5px;
 }
@@ -116,7 +116,7 @@
     padding: 4px;
 }
 .bikes>div>button:hover{
-    background-color: #e4ac06;
+    background-color:  #fed250c9;
     cursor: pointer;
 }
 .sep1{
