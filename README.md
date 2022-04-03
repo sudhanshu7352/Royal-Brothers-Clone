@@ -101,13 +101,13 @@ Follow the following steps to get development environment running.
   npm start
   ```
 
-## _Blog of This Project(Know more about the project and experiance)_
+<!-- ## _Blog of This Project(Know more about the project and experiance)_ -->
 
-<!--   [Medium](https://medium.com/@vs9425348/royalbrothers-clone-project-d782874dd621) -->
 
-## _Deployment Link of This Project_
 
-<!--   [Medium](https://medium.com/@vs9425348/royalbrothers-clone-project-d782874dd621) -->
+<!-- ## _Deployment Link of This Project_ -->
+
+
 
 
 <br/>
@@ -123,38 +123,66 @@ Follow the following steps to get development environment running.
 ## **_Snapshots of the Project_**
 
 - Landing Page (Modal Screen)
-  
-
-  <br/>
-
-  - Home Page along with Navbar and Footer and also show Pickup and dropping Timing:
-
-    
+<br/>
+    - Home Page along with Navbar and Footer and also show Pickup and dropping Timing:
+<br/>
 
 <br/>
 
+![Screenshot (1578)](https://user-images.githubusercontent.com/96018330/161436599-c1919a37-80c7-4b6d-898b-0bbeb4665ea2.png)
+
+![Screenshot (1579)](https://user-images.githubusercontent.com/96018330/161436606-0cd58933-9b91-4d65-8814-34f5c5a602c0.png)
+
+![Screenshot (1580)](https://user-images.githubusercontent.com/96018330/161436609-3390ce26-e0f7-4248-88f4-0293f7d90ddd.png)
+
+![Screenshot (1581)](https://user-images.githubusercontent.com/96018330/161436621-fe430350-275d-4c2e-8b06-ca810ee02b68.png)
+
+<br/>
+<br/>
+
 - Login and Sign Up Page 
+<br/>
   
+![Screenshot (1583)](https://user-images.githubusercontent.com/96018330/161436630-4a540450-116b-46b8-b92f-d4d1bbe72511.png)
 
+![Screenshot (1584)](https://user-images.githubusercontent.com/96018330/161436634-03dfe634-6953-4a0e-90b3-ac36fff86cec.png)
 
+<br/>
+
+<br/>
 
 - Explore page has all the Bike according to user Choice...
+<br/>
 
-    
+![Screenshot (1582)](https://user-images.githubusercontent.com/96018330/161436658-1f286ed3-1597-4388-8bb1-5ad9e8538125.png)
 
+![Screenshot (1585)](https://user-images.githubusercontent.com/96018330/161436677-ba1efd00-fd83-42a3-998c-dd17cf357c87.png)
+
+![Screenshot (1586)](https://user-images.githubusercontent.com/96018330/161436682-7ea51fd2-fe84-4c8b-a3cb-a2441cd5be6a.png)
+
+  <br/>
+  
   <br/>
 
 - Booking starting page with details
+<br/>
+
+![Screenshot (1587)](https://user-images.githubusercontent.com/96018330/161436688-bf8ad28f-c4cb-4fa4-b9ae-ed52e0742a6e.png)
 
   
    <br/>
    
+   <br/>
+   
 - Payment Option
+<br/>
+
+![Screenshot (1588)](https://user-images.githubusercontent.com/96018330/161436690-1754cba8-9a74-4190-9ffc-6c5805b234c1.png)
 
   
   <br/>
 
-- Payment Option
+![Screenshot (1589)](https://user-images.githubusercontent.com/96018330/161436696-2a1c878a-3de2-4ec2-a1a7-5b01f3687384.png)
 
  
   <br/>
