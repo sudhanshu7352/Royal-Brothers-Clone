@@ -6,7 +6,7 @@ export const LOGIN_FAILURE = 'LOGIN_FAILURE';
 
 // action creators
 
-export const loginReques = ({phone, password}) => ({
+export const loginRequest = ({phone, password}) => ({
     type: LOGIN_REQUEST,
     payload: {phone, password}
 });

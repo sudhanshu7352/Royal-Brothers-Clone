@@ -62,43 +62,7 @@ export const Checkout = () => {
 
   }
 
-  let date = JSON.parse(localStorage.getItem("date"));
-  let time = JSON.parse(localStorage.getItem("time"));
-  let ddate = JSON.parse(localStorage.getItem("ddate"));
-  let dtime = JSON.parse(localStorage.getItem("dtime"));
 
-  const [product, setProduct] = useState("");
-  const [coupon, setCoupan] = useState("");
-  const [text, setText] = useState("");
-  const [show, setShow] = useState("");
-
-  const [helmate, setHelmate] = useState(false);
-
-  let x = Date.parse(date);
-  let y = Date.parse(ddate);
-
-  let hour1 = time;
-  let hour2 = dtime;
-  // change into minutes
-  let hour1Min = hour1.split(":")[0];
-  let hour2Min = hour2.split(":")[0];
-  let ans = Math.abs(hour1Min - hour2Min);
-  if (hour1Min !== hour2Min && hour1.split(":")[1] === hour2.split(":")[1]) {
-    ans = ans + 1;
-  }
-
-  let t = Math.abs((x - y) / 3600000) + ans;
-
-  const { id } = useParams();
-
-  // useEffect(() => {
-  //    fetch(`https://bikeapis.herokuapp.com/bikes/${id}`).then((d) => d.json()).then((res) => {
-  //       console.log('res:', res)
-  //       setProduct(res)
-  //    }).catch((err) => {
-  //       console.log('err:', err)
-  //    })
-  // }, [id])
 
   const handleCoupon = (e) => {
     e.preventDefault();
@@ -112,23 +76,7 @@ export const Checkout = () => {
       alert("Invalid Coupon😞");
     }
   };
-  let total = 0;
-  let price = +product.hourPrice;
-  if (text === "brothers40") {
-    total += Math.abs(price - Math.floor((price * 40) / 100) * t);
-  } else {
-    total += product.hourPrice * t;
-  }
-
-  //   useEffect(() => {
-  //      let helmateText = +show
-  //      if (helmateText === 2) {
-  //         setHelmate(true)
-  //      }
-  //      else {
-  //         setHelmate(false)
-  //      }
-  //   }, [show])
+  
 
   return (
     <div className="main_box">
@@ -255,9 +203,7 @@ export const Checkout = () => {
             </span>
             <br />
             <br />
-            <span style={{ marginTop: "-60px" }} className="garage-title">
-              {helmate ? "Extra Helmet" : null}
-            </span>
+         
             <h6 className="garage-title amount ref" id="ref">
               Total Payable Amount
             </h6>
@@ -279,9 +225,7 @@ export const Checkout = () => {
             <span>&#x20B9;1500.00</span>
             <br />
             <br />
-            <span style={{ marginTop: "5px" }}>
-              {helmate ? "₹" + 70 + ".00" : null}
-            </span>
+  
             <h3 style={{ marginTop: "-3px" }}>₹{totalPaybleAmmount()}</h3>
           </div>
         </div>

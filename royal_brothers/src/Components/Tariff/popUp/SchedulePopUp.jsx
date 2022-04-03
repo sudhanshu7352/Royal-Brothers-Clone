@@ -11,6 +11,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
 import { DatePicker } from "./DatePicker";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -54,6 +55,8 @@ export function SchedulePopUp({isAvailable,item}) {
 
   const navigate = useNavigate()
 
+  const {isLogin} = useSelector(state => state)
+
 
 
   const [open, setOpen] = React.useState(false);
@@ -75,17 +78,23 @@ export function SchedulePopUp({isAvailable,item}) {
   const handleClickOpen = () => {
     setOpen(true);
   };
+
   const handleClose = () => {
-    console.log(Schedule);
+    setOpen(false);
+  };
 
-    const newSchedule = {
-      pickUpDate: new Date(Schedule.pickUpDate).toUTCString(),
-      pickUpTime: new Date(Schedule.pickUpTime).toTimeString(),
-      dropOffDate: new Date(Schedule.dropOffDate).toUTCString(),
-      dropOffTime: new Date(Schedule.dropOffTime).toTimeString(),
-    };
 
-    console.log(newSchedule);
+  const handleSubmit = () => {
+    // console.log(Schedule);
+
+    // const newSchedule = {
+    //   pickUpDate: new Date(Schedule.pickUpDate).toUTCString(),
+    //   pickUpTime: new Date(Schedule.pickUpTime).toTimeString(),
+    //   dropOffDate: new Date(Schedule.dropOffDate).toUTCString(),
+    //   dropOffTime: new Date(Schedule.dropOffTime).toTimeString(),
+    // };
+
+    // console.log(newSchedule);
     localStorage.setItem("bikeScheduleDetails", JSON.stringify(Schedule));
     localStorage.setItem("bikeDetails", JSON.stringify(item));
     setSchedule({
@@ -95,7 +104,15 @@ export function SchedulePopUp({isAvailable,item}) {
      dropOffTime: "",
    })
     setOpen(false);
-    navigate("/product")
+
+    // console.log(isLogin)
+
+    if(isLogin.data){
+      navigate("/product")
+      return
+    }
+
+    navigate("/login")
 
   };
 
@@ -139,9 +156,14 @@ export function SchedulePopUp({isAvailable,item}) {
 
         <DialogActions>
           <Button
-          disabled={Schedule.pickUpDate === "" || Schedule.pickUpTime === "" || Schedule.dropOffDate === "" || Schedule.dropOffTime === ""}
+            disabled={
+              Schedule.pickUpDate === "" ||
+              Schedule.pickUpTime === "" ||
+              Schedule.dropOffDate === "" ||
+              Schedule.dropOffTime === ""
+            }
             autoFocus
-            onClick={handleClose}
+            onClick={handleSubmit}
             sx={{
               width: "100%",
               backgroundColor: "#fed250",

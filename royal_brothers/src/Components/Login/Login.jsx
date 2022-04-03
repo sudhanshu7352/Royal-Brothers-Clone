@@ -1,5 +1,11 @@
 import React from "react";
 import "./Login.css";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  loginRequest,
+  loginSuccess,
+  loginFailure,
+} from "../../Redux/Login/action";
 import { Link, useNavigate } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
@@ -7,6 +13,8 @@ import axios from "axios";
 export const Login = () => {
 
   const navigate = useNavigate();
+
+  const dispatch = useDispatch();
 
   const [captcha, setCaptcha] = React.useState(false);
 
@@ -32,15 +40,21 @@ export const Login = () => {
       .then((res) => {
         console.log(res.data);
         alert("Login Successful");
-        navigate("/");
+
+        dispatch(loginSuccess(res.data));
+        localStorage.setItem("userDetailsRoyalBrothers", JSON.stringify(res.data));
+
+        
         setUserDetails({
           phone: "",
           password: "",
         });
+        navigate("/");
       })
       .catch((err) => {
         console.log(err);
         alert("Login Failed");
+        dispatch(loginFailure(err));
       });
   };
 

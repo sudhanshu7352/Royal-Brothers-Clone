@@ -3,12 +3,12 @@
 import { LOGIN_FAILURE, LOGIN_REQUEST,LOGIN_SUCCESS } from "./action";
 
 const initialState = {
-    isLoading: false,
-    isError: false,
-    data: null
-}
+  isLoading: false,
+  isError: false,
+  data: JSON.parse(localStorage.getItem("userDetailsRoyalBrothers")) || null,
+};
 
-export const loginReducer = (state = {}, action) => {
+export const loginReducer = (state = initialState, action) => {
     switch (action.type) {
         case LOGIN_REQUEST:
         return {
