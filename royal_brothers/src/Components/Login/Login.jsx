@@ -118,7 +118,7 @@ export const Login = () => {
 
         {/* catcha work is pending */}
 
-        <ReCAPTCHA
+        {/* <ReCAPTCHA
           style={{
             width: "80%",
             margin: "auto",
@@ -127,7 +127,7 @@ export const Login = () => {
           }}
           sitekey="Your client site key"
           onChange={handleCaptcha}
-        />
+        /> */}
 
         <button onClick={handleSubmit} className="btn loginbutton">
           Login with Password

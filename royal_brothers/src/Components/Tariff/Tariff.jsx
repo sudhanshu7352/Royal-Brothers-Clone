@@ -59,7 +59,7 @@ export  function Tariff() {
       ) : (
         <>
           <h1 style={{ margin: "10px 0px 30px 0px" }}>
-            Bike rental tariffs in Bangalore
+            Bike rental tariffs in Delhi
           </h1>
           <Box sx={{ flexGrow: 1, width: "80%", m: "auto" }}>
             <Grid container spacing={6}>

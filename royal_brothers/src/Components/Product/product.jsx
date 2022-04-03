@@ -11,7 +11,22 @@ export const Product = () => {
   const [data, setdata] = React.useState([]);
 
   
+  const handleSort = (dir) => {
+    const newdata = [...data]
+    if(dir=="asc"){
+      newdata.sort((a,b) =>{
+        return a.hourly_rate - b.hourly_rate
+      })
 
+      setdata([...newdata])
+      return
+    }
+    newdata.sort((a,b) =>{
+        return b.hourly_rate - a.hourly_rate
+    })
+    setdata([...newdata])
+      return
+  }
 
 
   React.useEffect(() => {
@@ -51,10 +66,10 @@ export const Product = () => {
           <button id="bottomVBtnHover" style={{ color: "#9e9e9e" }}>
             <span>Relevance</span>
           </button>
-          <button id="bottomVBtnHover" style={{ color: "#9e9e9e" }}>
+          <button onClick={() =>handleSort("asc")}id="bottomVBtnHover" style={{ color: "#9e9e9e" }}>
             <span>Price - Low to High</span>
           </button>
-          <button id="bottomVBtnHover" style={{ color: "#9e9e9e" }}>
+          <button onClick={() =>handleSort("dec")} id="bottomVBtnHover" style={{ color: "#9e9e9e" }}>
             <span>Price - High to Low</span>
           </button>
         </div>
