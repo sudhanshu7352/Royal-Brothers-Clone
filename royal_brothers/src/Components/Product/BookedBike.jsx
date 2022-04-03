@@ -95,19 +95,19 @@ export const BookedBike = (props) => {
                   </select> } */}
         <div className="timingbike">
           <div>
-            <p className="arrivetime">
+            <p className="arrivetime" style={{fontSize:"11px"}}>
               {convertDateTime(bikeScheduleDetails.pickUpTime)}
             </p>
-            <p className="arrivetime">
+            <p className="arrivetime" style={{fontSize:"11px"}}>
               {new Date(bikeScheduleDetails.pickUpDate).toDateString()}
             </p>
           </div>
           <div className="timingTo">to</div>
           <div>
-            <p className="arrivetime">
+            <p className="arrivetime" style={{fontSize:"11px"}}>
               {convertDateTime(bikeScheduleDetails.dropOffTime)}
             </p>
-            <p className="arrivetime">
+            <p className="arrivetime" style={{fontSize:"11px"}}>
               {new Date(bikeScheduleDetails.dropOffDate).toDateString()}
             </p>
           </div>

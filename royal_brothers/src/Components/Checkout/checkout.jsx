@@ -203,7 +203,7 @@ export const Checkout = () => {
             </span>
             <br />
             <br />
-         
+
             <h6 className="garage-title amount ref" id="ref">
               Total Payable Amount
             </h6>
@@ -219,13 +219,15 @@ export const Checkout = () => {
                 <br />
               </>
             ) : null}
-            <span>&#x20B9;{(bookedBikeDetails.totalPrice / 100) * 28}.00</span>
+            <span>
+              &#x20B9;{Math.round((bookedBikeDetails.totalPrice / 100) * 28)}.00
+            </span>
             <br />
             <br />
             <span>&#x20B9;1500.00</span>
             <br />
             <br />
-  
+
             <h3 style={{ marginTop: "-3px" }}>₹{totalPaybleAmmount()}</h3>
           </div>
         </div>

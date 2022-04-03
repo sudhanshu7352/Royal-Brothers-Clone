@@ -33,7 +33,11 @@ export const Thanks = () => {
 
       <div className="Main2">
         <div className="Parent1">
-          <img alt="" src={checkoutDetails.image} />
+          <img
+            alt=""
+            src={checkoutDetails.image}
+            width={checkoutDetails.name === "Pulsar"?"70%":"auto"}
+          />
           <p>{checkoutDetails.name}</p>
         </div>
         <div className="Parent2">

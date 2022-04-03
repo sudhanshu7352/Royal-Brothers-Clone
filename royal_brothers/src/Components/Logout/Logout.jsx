@@ -3,14 +3,18 @@ import PersonIcon from '@mui/icons-material/Person';
 import LogoutIcon from '@mui/icons-material/Logout';
 import {logoutRequest} from "../../Redux/Login/action"
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 export const Logout = ({name}) => {
 
     const dispatch = useDispatch()
 
+    const navigate = useNavigate()
+
     const handleLogout =() => {
         localStorage.removeItem("userDetailsRoyalBrothers")
         dispatch(logoutRequest())
+        navigate("/")
     }
 
     return (
