@@ -51,7 +51,7 @@ Follow the following steps to get development environment running.
 1. Clone 'Royal-Brothers-Clone' repository from GitHub
 
    ```bash
-   git clone https://github.com/Vishal062/royalBrothers_Clone.git
+   git clone https://github.com/divyansh050/Royal-Brothers-Clone.git
    ```
 
 
