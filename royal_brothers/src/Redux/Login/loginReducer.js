@@ -1,6 +1,11 @@
 // login reducer
 
-import { LOGIN_FAILURE, LOGIN_REQUEST,LOGIN_SUCCESS } from "./action";
+import {
+  LOGIN_FAILURE,
+  LOGIN_REQUEST,
+  LOGIN_SUCCESS,
+  LOGOUT_SUCCESS,
+} from "./action";
 
 const initialState = {
   isLoading: false,
@@ -31,6 +36,13 @@ export const loginReducer = (state = initialState, action) => {
             isError: true,
             data: action.payload
         };
+        case LOGOUT_SUCCESS:
+        return {
+            ...state,
+            isLoading: false,
+            isError: false,
+            data: null
+        }
         default:
         return state;
     }

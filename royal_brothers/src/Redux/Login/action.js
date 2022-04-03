@@ -3,6 +3,7 @@
 export const LOGIN_REQUEST = 'LOGIN_REQUEST';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_FAILURE = 'LOGIN_FAILURE';
+export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS";
 
 // action creators
 
@@ -19,4 +20,10 @@ export const loginSuccess = (data) => ({
 export const loginFailure = (error) => ({
     type: LOGIN_FAILURE,
     payload: error
+});
+
+export const logoutRequest = () => ({
+    type: LOGOUT_SUCCESS,
+    payload: null
+
 });

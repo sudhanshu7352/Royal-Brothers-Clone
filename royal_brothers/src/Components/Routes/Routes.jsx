@@ -16,7 +16,7 @@ import {Logout} from "../Logout/Logout"
 
 export const Routes = () => {
   return (
-    <>
+    <> 
       <Navbar />
       <ROUTES>
         <Route exact path="/" element={<Home />} />
