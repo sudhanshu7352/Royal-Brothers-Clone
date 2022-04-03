@@ -28,7 +28,7 @@ export const SignUp = () => {
     // register flow complete, connect redux store remaining
 
     axios
-      .post("http://localhost/register", userDetails)
+      .post("https://royal-brothers.herokuapp.com/register", userDetails)
       .then((res) => {
         console.log(res.data);
         alert("Register Successful");

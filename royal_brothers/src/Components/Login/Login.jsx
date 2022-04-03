@@ -27,19 +27,21 @@ export const Login = () => {
 
     // login flow complete, connect redux, isAuth and token store remaining
 
-    axios.post("http://localhost/login", userDetails).then((res) => {
-      console.log(res.data);
-      alert("Login Successful");
-      navigate("/");
-      setUserDetails({
-        phone: "",
-        password: "",
+    axios
+      .post("https://royal-brothers.herokuapp.com/login", userDetails)
+      .then((res) => {
+        console.log(res.data);
+        alert("Login Successful");
+        navigate("/");
+        setUserDetails({
+          phone: "",
+          password: "",
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("Login Failed");
       });
-    })
-    .catch((err) => {
-      console.log(err);
-      alert("Login Failed");
-    })
   };
 
   const handleCaptcha = () => {

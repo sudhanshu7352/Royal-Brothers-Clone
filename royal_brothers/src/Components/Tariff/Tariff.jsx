@@ -24,16 +24,17 @@ export  function Tariff() {
   useEffect(() => {
 
     setIsLoading(true)
-    axios.get('http://localhost/bikes')
-     .then(res => {
-      console.log(res.data.data)
-      
-      setBikes(res.data.data)
-      setIsLoading(false)
-    })
-     .catch(e =>{
-      console.log(e)
-    })
+    axios
+      .get("https://royal-brothers.herokuapp.com/bikes")
+      .then((res) => {
+        console.log(res.data.data);
+
+        setBikes(res.data.data);
+        setIsLoading(false);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
     
   
     return () => {
