@@ -6,14 +6,17 @@ RoyalBrothers is a bike rental website where you can select your city Then picku
 
 - Book a ride with just select your city
 - compare Bike prices with another bike
-- Sign in / Sign up with email and Otp
+- Sign in / Sign up
 - A large collection of Bike
+- Sorting by price
+- responsive for all devices
 
 ## Tech Stack
 
 #### **Frontend**
 
 - <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" width=20/> [ReactJs](https://reactjs.org/)
+- <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" width=20 /> [Redux](https://redux.js.org)
 - <img src="https://cdn-icons-png.flaticon.com/512/226/226269.png" width=20/> [HTML](https://www.w3.org/html/)
 - <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" width=20 /> [CSS](https://www.w3schools.com/css/)
 
@@ -22,7 +25,6 @@ RoyalBrothers is a bike rental website where you can select your city Then picku
 - <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" width=25 /> [Mongodb](https://www.mongodb.com/)
 - <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" width=25 /> [Expressjs](https://expressjs.com/)
 - <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" width=25 /> [Nodejs](https://nodejs.org/en/)
-- <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" width=20 /> [Redux](https://redux.js.org)
 
 ##### **Fetch data**
 
@@ -37,7 +39,7 @@ RoyalBrothers is a bike rental website where you can select your city Then picku
 #### **Encryptation and Password Privacy**
 
 - [bcrypt](https://www.npmjs.com/package/bcrypt)
-- [OTP oAuth](https://developers.google.com/identity/protocols/oauth2)
+<!-- - [OTP oAuth](https://developers.google.com/identity/protocols/oauth2) -->
 - [JSON web token](https://jwt.io)
 
 # _Getting Started_
@@ -90,13 +92,13 @@ Follow the following steps to get development environment running.
   - client
 
   ```bash
-  npm start
+  npm run dev
   ```
 
   - server
 
   ```bash
-  node server.js
+  npm start
   ```
 
 ## _Blog of This Project(Know more about the project and experiance)_
