@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./Product.css";
+import "./product.css";
 import InputBase from "@mui/material/InputBase";
 import Paper from "@mui/material/Paper";
 import axios from "axios";
